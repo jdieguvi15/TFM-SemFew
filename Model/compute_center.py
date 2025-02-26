@@ -48,7 +48,7 @@ def main(args):
     elif args.dataset == 'FC100':
         trainset = ImageFolder('/path/to/your/fc100/train', transform=transform_val_cifar if args.backbone == 'resnet' else transform_val_224_cifar)
     elif args.dataset == 'CIFAR-FS':
-        trainset = ImageFolder('/Users/jdieguez/Documents/master/TFM/code/cifar-fs/train', transform=transform_val_cifar if args.backbone == 'resnet' else transform_val_224_cifar)
+        trainset = ImageFolder(args.path_to_cifar-fs + '/train', transform=transform_val_cifar if args.backbone == 'resnet' else transform_val_224_cifar)
     elif args.dataset == 'TieredImageNet':
         trainset = tieredImageNet(setname='train', augment=False)
 
@@ -98,10 +98,17 @@ if __name__ == '__main__':
                         choices=['mean', 'cluster'])
     parser.add_argument('--backbone', default='resnet',
                         choices=['resnet', 'swin'])
+                        
+    parser.add_argument('--path_to_checkpoints', default='./checkpoints')
+    parser.add_argument('--path_to_cifar-fs', default='/Users/jdieguez/Documents/master/TFM/code/cifar-fs')
+    parser.add_argument('--path_to_fc100', default='/path/to/your/fc100/')
+    parser.add_argument('--path_to_miniimagenet', default='/path/to/your/miniimagenet')
+    parser.add_argument('--path_to_tieredimagenet', default='/path/to/your/tiredimagenet')
+    
     args = parser.parse_args()
     print(vars(args))
     if args.backbone == 'resnet':
-        args.model_path = './checkpoints/ResNet-{}.pth'.format(args.dataset)
+        args.model_path = f"{args.path_to_checkpoints}/ResNet-{args.dataset}.pth"
     elif args.backbone == 'swin':
-        args.model_path = './checkpoints/Swin-Tiny-{}.pth'.format(args.dataset)
+        args.model_path = f"{args.path_to_checkpoints}/Swin-Tiny-{args.dataset}.pth"
     main(args)

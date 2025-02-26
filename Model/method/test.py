@@ -61,7 +61,7 @@ if __name__ == '__main__':
         args.test = '/path/to/your/fc100/test'
         test_dataset = ImageFolder(args.test, transform=transform_val_cifar if args.backbone == 'resnet' else transform_val_224_cifar)
     elif args.dataset == 'CIFAR-FS':
-        args.test = '/Users/jdieguez/Documents/master/TFM/code/cifar-fs/test'
+        args.test = args.path_to_cifar-fs + 'test'
         test_dataset = ImageFolder(args.test, transform=transform_val_cifar if args.backbone == 'resnet' else transform_val_224_cifar)
     elif args.dataset == 'TieredImageNet':
         test_dataset = tieredImageNet(setname='test')
