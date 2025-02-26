@@ -66,8 +66,8 @@ def train(args):
         val_dataset = ImageFolder(args.val, transform=transform_val_cifar if args.backbone == 'resnet' else transform_val_224_cifar)
 
     elif args.dataset == 'CIFAR-FS':
-        args.val = args.path_to_cifar-fs + '/val'
-        args.train = args.path_to_cifar-fs + 'train'
+        args.val = args.path_to_cifarfs + '/val'
+        args.train = args.path_to_cifarfs + 'train'
         train_dataset = ImageFolder(args.train, transform=transform_train_cifar if args.backbone == 'resnet' else transform_train_224_cifar)
         val_dataset = ImageFolder(args.val, transform=transform_val_cifar if args.backbone == 'resnet' else transform_train_224_cifar)
 
