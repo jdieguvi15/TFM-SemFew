@@ -28,11 +28,6 @@ from utils import Cosine_classifier, count_95acc, transform_val_cifar, transform
 from utils import transform_val_224_cifar, transform_train_224_cifar, transform_train_224, transform_val_224
 
 def train(args):
-    if args.backbone == 'resnet':
-        args.model_path = './checkpoints/ResNet-{}.pth'.format(args.dataset)
-    elif args.backbone == 'swin':
-        args.model_path = './checkpoints/Swin-Tiny-{}.pth'.format(args.dataset)
-        
     args.work_dir = '{}_{}_{}_{}_{}_{}'.format(args.backbone, args.dataset, args.mode, args.text_type, args.center, args.shot)
 
     if args.dataset == 'TieredImageNet':
@@ -253,5 +248,11 @@ if __name__ == '__main__':
     parser.add_argument('--backbone', type=str, default='resnet',
                         choices=['resnet', 'swin'])
     args = parser.parse_args()
+    
+    print(vars(args))
+    if args.backbone == 'resnet':
+        args.model_path = f"{args.path_to_checkpoints}/ResNet-{args.dataset}.pth"
+    elif args.backbone == 'swin':
+        args.model_path = f"{args.path_to_checkpoints}/Swin-Tiny-{args.dataset}.pth"
     
     train(args)

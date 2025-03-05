@@ -20,31 +20,7 @@ from model.res12 import Res12
 from model.swin_transformer import swin_tiny
 from utils import set_seed, Cosine_classifier, count_95acc, count_kacc, transform_val_cifar, transform_val, transform_val_224, transform_val_224_cifar
 
-if __name__ == '__main__':
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--test-batch', type=int, default=600)
-    parser.add_argument('--shot', type=int, default=1)
-    parser.add_argument('--query', type=int, default=15)
-    parser.add_argument('--test-way', type=int, default=5)
-    parser.add_argument('--center', default='mean',
-                        choices=['mean', 'mean'])
-    parser.add_argument('--seed', type=int, default=13)
-    parser.add_argument('--feat-size', type=int, default=640)
-    parser.add_argument('--semantic-size', type=int, default=512)
-    parser.add_argument('--num-workers', type=int, default=8)
-    parser.add_argument('--mode', type=str, default='clip',
-                        choices=['clip', 'bert'])
-    parser.add_argument('--text_type', type=str, default='gpt',
-                        choices=['gpt', 'name', 'definition'])
-    parser.add_argument('--dataset', type=str, default='TieredImageNet',
-                        choices=['MiniImageNet', 'TieredImageNet', 'FC100', 'CIFAR-FS'])
-    parser.add_argument('--backbone', type=str, default='resnet',
-                        choices=['resnet', 'swin'])
-    args = parser.parse_args()
-    if args.backbone == 'resnet':
-        args.model_path = './checkpoints/ResNet-{}.pth'.format(args.dataset)
-    elif args.backbone == 'swin':
-        args.model_path = './checkpoints/Swin-Tiny-{}.pth'.format(args.dataset)
+def test(args):
     args.work_dir = '{}_{}_{}_{}_{}_{}'.format(args.backbone, args.dataset, args.mode, args.text_type, args.center, args.shot)
 
     log = loggers('test_{}'.format(args.dataset))
@@ -151,3 +127,33 @@ if __name__ == '__main__':
             best_k, A_acc[0] * 100, A_acc[1] * 100, A_acc[0] * 100 - P_acc * 100))
         log.info('ACC:|proto acc: %.2f+%.2f%% |gen acc: %.2f+%.2f%%' % (
             P_acc * 100, P_95 * 100, G_acc * 100, G_95 * 100))
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--test-batch', type=int, default=600)
+    parser.add_argument('--shot', type=int, default=1)
+    parser.add_argument('--query', type=int, default=15)
+    parser.add_argument('--test-way', type=int, default=5)
+    parser.add_argument('--center', default='mean',
+                        choices=['mean', 'mean'])
+    parser.add_argument('--seed', type=int, default=13)
+    parser.add_argument('--feat-size', type=int, default=640)
+    parser.add_argument('--semantic-size', type=int, default=512)
+    parser.add_argument('--num-workers', type=int, default=8)
+    parser.add_argument('--mode', type=str, default='clip',
+                        choices=['clip', 'bert'])
+    parser.add_argument('--text_type', type=str, default='gpt',
+                        choices=['gpt', 'name', 'definition'])
+    parser.add_argument('--dataset', type=str, default='TieredImageNet',
+                        choices=['MiniImageNet', 'TieredImageNet', 'FC100', 'CIFAR-FS'])
+    parser.add_argument('--backbone', type=str, default='resnet',
+                        choices=['resnet', 'swin'])
+    args = parser.parse_args()
+    
+    print(vars(args))
+    if args.backbone == 'resnet':
+        args.model_path = f"{args.path_to_checkpoints}/ResNet-{args.dataset}.pth"
+    elif args.backbone == 'swin':
+        args.model_path = f"{args.path_to_checkpoints}/Swin-Tiny-{args.dataset}.pth"
+        
+    test(args)
