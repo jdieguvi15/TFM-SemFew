@@ -1,0 +1,9 @@
+2025-03-05 16:57:19,556 - train.py[line:50] - INFO: {}
+[34m[1mwandb[0m: [33mWARNING[0m Calling wandb.login() after wandb.init() has no effect.
+2025-03-05 16:57:33,033 - train.py[line:50] - INFO: {}
+2025-03-05 16:57:33,033 - train.py[line:50] - INFO: {}
+96
+100%|██████████| 301/301 [01:39<00:00,  3.03it/s]
+2025-03-05 16:59:15,376 - train.py[line:158] - INFO: [Epoch 0/50] [recon loss: 0.111771]
+2025-03-05 16:59:15,376 - train.py[line:158] - INFO: [Epoch 0/50] [recon loss: 0.111771]
+ 60%|██████    | 362/600 [02:01<01:20,  2.97it/s]

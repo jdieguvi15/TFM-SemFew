@@ -1,5 +1,6 @@
 import os
 import sys
+import wandb
 
 
 
@@ -28,6 +29,15 @@ from utils import Cosine_classifier, count_95acc, transform_val_cifar, transform
 from utils import transform_val_224_cifar, transform_train_224_cifar, transform_train_224, transform_val_224
 
 def train(args):
+    
+    use_wandb = True
+    if use_wandb:
+        wandb.login()
+        wandb.init(
+            project=args["project"],
+            name=args["run_name"],
+            config=args)
+            
     args.work_dir = '{}_{}_{}_{}_{}_{}'.format(args.backbone, args.dataset, args.mode, args.text_type, args.center, args.shot)
 
     if args.dataset == 'TieredImageNet':
@@ -149,6 +159,9 @@ def train(args):
             "[Epoch %d/%d] [recon loss: %f] "
             % (epoch, args.max_epoch, recon_loss.item(),)
         )
+        
+        if use_wandb:
+            wandb.log({"recon_loss": recon_loss.item()})
 
         lr_scheduler.step()
 

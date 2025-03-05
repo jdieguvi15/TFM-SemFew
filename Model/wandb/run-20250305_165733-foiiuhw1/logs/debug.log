@@ -1,0 +1,9 @@
+2025-03-05 16:57:33,030 INFO    MainThread:63370 [wandb_init.py:setup_run_log_directory():647] Logging user logs to /Users/jdieguez/Documents/master/TFM/code/TFM-SemFew/Model/wandb/run-20250305_165733-foiiuhw1/logs/debug.log
+2025-03-05 16:57:33,031 INFO    MainThread:63370 [wandb_init.py:setup_run_log_directory():648] Logging internal logs to /Users/jdieguez/Documents/master/TFM/code/TFM-SemFew/Model/wandb/run-20250305_165733-foiiuhw1/logs/debug-internal.log
+2025-03-05 16:57:33,031 INFO    MainThread:63370 [wandb_init.py:init():761] calling init triggers
+2025-03-05 16:57:33,031 INFO    MainThread:63370 [wandb_init.py:init():766] wandb.init called with sweep_config: {}
+config: {'dataset': 'CIFAR-FS', 'backbone': 'resnet', 'center': 'mean', 'gpu': 0, 'project': 'SemFew_recreate', 'run_name': 'local', 'path_to_checkpoints': '/Users/jdieguez/Documents/master/TFM/code/checkpoints', 'path_to_cifarfs': '/Users/jdieguez/Documents/master/TFM/code/cifar-fs/', 'path_to_fc100': '/path/to/your/fc100/', 'path_to_miniimagenet': '/path/to/your/miniimagenet', 'path_to_tieredimagenet': '/path/to/your/tiredimagenet', 'max_epoch': 50, 'test_batch': 600, 'shot': 1, 'query': 15, 'test_way': 5, 'feat_size': 640, 'semantic_size': 512, 'batch_size': 128, 'num_workers': 8, 'drop': 0.0, 'lr': 0.0001, 'step_size': 30, 'mode': 'clip', 'text_type': 'gpt', 'test-batch': 600, 'seed': 13, 'model_path': '/Users/jdieguez/Documents/master/TFM/code/checkpoints/ResNet-CIFAR-FS.pth', '_wandb': {}}
+2025-03-05 16:57:33,031 INFO    MainThread:63370 [wandb_init.py:init():776] wandb.init() called while a run is active
+2025-03-05 17:01:18,861 INFO    MainThread:63370 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-05 17:01:18,862 INFO    MainThread:63370 [wandb_init.py:_pause_backend():564] pausing backend
+2025-03-05 17:01:20,742 INFO    MsgRouterThr:63370 [mailbox.py:close():129] Closing mailbox, abandoning 1 handles.
