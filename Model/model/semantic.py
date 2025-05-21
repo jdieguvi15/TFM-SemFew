@@ -72,6 +72,31 @@ def generate_descriptions(args):
                     print(f"❌ Error with class {cls}: {e}")
                     class_descriptions[cls] = None
 
+        elif:
+            for cls in class_names:
+                # Build the prompt
+                messages = [
+                    {
+                        "role": "user",
+                        "content": [
+                            {"type": "text", "text": f"Please write a detailed visual definition of the class {cls}. Make it more visually detailed and consistent with scientific fact for a IA model to differentiate it from this class to other classes like {set(class_names) - set([cls])}. Briefness is required, using only one paragraph."}
+                        ]
+                    }
+                ]
+            
+                try:
+                    response = client.chat.completions.create(
+                        model=model,
+                        messages=messages,
+                    )
+                    description = response.choices[0].message.content.strip()
+                    class_descriptions[cls] = description
+                    if args['verbose']:
+                        print(f"✔️ {cls}: Description generated.")
+                except Exception as e:
+                    print(f"❌ Error with class {cls}: {e}")
+                    class_descriptions[cls] = None
+
     # Optional: Save results to JSON
     import json
     with open("class_descriptions.json", "w") as f:
