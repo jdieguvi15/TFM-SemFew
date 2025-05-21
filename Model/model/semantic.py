@@ -1,5 +1,6 @@
 import os
 import sys
+import json
 import argparse
 import torch
 import base64
@@ -13,6 +14,13 @@ def generate_descriptions(args):
 
     llm = args['llm']
     KEY = args['key']
+
+    json_path = f"class_descriptions_{args.llm}_{args.semantics_from}.json"
+
+    # Already calculated
+    if os.path.exists(json_path):
+        with open(json_path, "r") as f:
+            return json.load(f)
 
     if llm == "groq":
         client = Groq(api_key=KEY)
@@ -97,9 +105,8 @@ def generate_descriptions(args):
                     print(f"❌ Error with class {cls}: {e}")
                     class_descriptions[cls] = None
 
-    # Optional: Save results to JSON
-    import json
-    with open("class_descriptions.json", "w") as f:
+    # Save results to JSON
+    with open(json_path, "w") as f:
         json.dump(class_descriptions, f, indent=2)
 
     # Print results
@@ -135,8 +142,19 @@ def encode_descriptions(args, class_descriptions):
 
 
 def generate_semantics(args):
+    json_path = f"class_encodings_{args.llm}_{args.semantics_from}.json"
+    
+    # Already calculated
+    if os.path.exists(json_path):
+        with open(json_path, "r") as f:
+            return json.load(f)
+
     class_descriptions = generate_descriptions(args)
     return encode_descriptions(args, class_descriptions)
+
+    # Save results to JSON
+    with open(json_path, "w") as f:
+        json.dump(class_descriptions, f, indent=2)
 
 
 if __name__ == '__main__':

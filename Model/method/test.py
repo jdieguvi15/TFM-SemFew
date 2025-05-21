@@ -14,6 +14,7 @@ import torch
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 
+from model.semantic import generate_semantics
 from data.samplers import CategoriesSampler
 from logger import loggers
 from model.res12 import Res12
