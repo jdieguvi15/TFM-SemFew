@@ -1,0 +1,37 @@
+2025-03-05 17:06:19,926 INFO    MainThread:68378 [wandb_setup.py:_flush():67] Current SDK version is 0.19.8
+2025-03-05 17:06:19,928 INFO    MainThread:68378 [wandb_setup.py:_flush():67] Configure stats pid to 68378
+2025-03-05 17:06:19,928 INFO    MainThread:68378 [wandb_setup.py:_flush():67] Loading settings from /Users/jdieguez/.config/wandb/settings
+2025-03-05 17:06:19,928 INFO    MainThread:68378 [wandb_setup.py:_flush():67] Loading settings from /Users/jdieguez/Documents/master/TFM/code/TFM-SemFew/Model/wandb/settings
+2025-03-05 17:06:19,928 INFO    MainThread:68378 [wandb_setup.py:_flush():67] Loading settings from environment variables
+2025-03-05 17:06:19,928 INFO    MainThread:68378 [wandb_init.py:setup_run_log_directory():647] Logging user logs to /Users/jdieguez/Documents/master/TFM/code/TFM-SemFew/Model/wandb/run-20250305_170619-j55o6ruk/logs/debug.log
+2025-03-05 17:06:19,928 INFO    MainThread:68378 [wandb_init.py:setup_run_log_directory():648] Logging internal logs to /Users/jdieguez/Documents/master/TFM/code/TFM-SemFew/Model/wandb/run-20250305_170619-j55o6ruk/logs/debug-internal.log
+2025-03-05 17:06:19,930 INFO    MainThread:68378 [wandb_init.py:monkeypatch_ipython():599] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x184f70490>
+2025-03-05 17:06:19,937 INFO    MainThread:68378 [wandb_init.py:init():761] calling init triggers
+2025-03-05 17:06:19,937 INFO    MainThread:68378 [wandb_init.py:init():766] wandb.init called with sweep_config: {}
+config: {'dataset': 'CIFAR-FS', 'backbone': 'resnet', 'center': 'mean', 'gpu': 0, 'project': 'SemFew_recreate', 'run_name': 'local', 'path_to_checkpoints': '/Users/jdieguez/Documents/master/TFM/code/checkpoints', 'path_to_cifarfs': '/Users/jdieguez/Documents/master/TFM/code/cifar-fs/', 'path_to_fc100': '/path/to/your/fc100/', 'path_to_miniimagenet': '/path/to/your/miniimagenet', 'path_to_tieredimagenet': '/path/to/your/tiredimagenet', 'max_epoch': 50, 'test_batch': 600, 'shot': 1, 'query': 15, 'test_way': 5, 'feat_size': 640, 'semantic_size': 512, 'batch_size': 128, 'num_workers': 8, 'drop': 0.0, 'lr': 0.0001, 'step_size': 30, 'mode': 'clip', 'text_type': 'gpt', 'test-batch': 600, 'seed': 13, 'model_path': '/Users/jdieguez/Documents/master/TFM/code/checkpoints/ResNet-CIFAR-FS.pth', '_wandb': {}}
+2025-03-05 17:06:19,938 INFO    MainThread:68378 [wandb_init.py:init():784] starting backend
+2025-03-05 17:06:19,938 INFO    MainThread:68378 [wandb_init.py:init():788] sending inform_init request
+2025-03-05 17:06:20,065 INFO    MainThread:68378 [backend.py:_multiprocessing_setup():101] multiprocessing start_methods=spawn,fork,forkserver, using: spawn
+2025-03-05 17:06:20,067 INFO    MainThread:68378 [wandb_init.py:init():798] backend started and connected
+2025-03-05 17:06:20,177 INFO    MainThread:68378 [wandb_run.py:_label_probe_notebook():1204] probe notebook
+2025-03-05 17:06:20,178 INFO    MainThread:68378 [wandb_run.py:_label_probe_notebook():1214] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2025-03-05 17:06:20,178 INFO    MainThread:68378 [wandb_init.py:init():891] updated telemetry
+2025-03-05 17:06:20,232 INFO    MainThread:68378 [wandb_init.py:init():915] communicating run to backend with 90.0 second timeout
+2025-03-05 17:06:20,844 INFO    MainThread:68378 [wandb_init.py:init():990] starting run threads in backend
+2025-03-05 17:06:21,344 INFO    MainThread:68378 [wandb_run.py:_console_start():2375] atexit reg
+2025-03-05 17:06:21,345 INFO    MainThread:68378 [wandb_run.py:_redirect():2227] redirect: wrap_raw
+2025-03-05 17:06:21,346 INFO    MainThread:68378 [wandb_run.py:_redirect():2292] Wrapping output streams.
+2025-03-05 17:06:21,346 INFO    MainThread:68378 [wandb_run.py:_redirect():2315] Redirects installed.
+2025-03-05 17:06:21,353 INFO    MainThread:68378 [wandb_init.py:init():1032] run started, returning control to user process
+2025-03-05 17:17:26,049 INFO    MainThread:68378 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-05 17:17:26,051 INFO    MainThread:68378 [wandb_init.py:_pause_backend():564] pausing backend
+2025-03-05 17:23:17,883 INFO    MainThread:68378 [wandb_init.py:_resume_backend():569] resuming backend
+2025-03-05 17:23:18,381 INFO    MainThread:68378 [wandb_init.py:setup_run_log_directory():647] Logging user logs to /Users/jdieguez/Documents/master/TFM/code/TFM-SemFew/Model/wandb/run-20250305_172318-02857ibt/logs/debug.log
+2025-03-05 17:23:18,382 INFO    MainThread:68378 [wandb_init.py:setup_run_log_directory():648] Logging internal logs to /Users/jdieguez/Documents/master/TFM/code/TFM-SemFew/Model/wandb/run-20250305_172318-02857ibt/logs/debug-internal.log
+2025-03-05 17:23:18,383 INFO    MainThread:68378 [wandb_init.py:init():761] calling init triggers
+2025-03-05 17:23:18,383 INFO    MainThread:68378 [wandb_init.py:init():766] wandb.init called with sweep_config: {}
+config: {'dataset': 'CIFAR-FS', 'backbone': 'resnet', 'center': 'mean', 'gpu': 0, 'project': 'SemFew_recreate', 'run_name': 'local', 'path_to_checkpoints': '/Users/jdieguez/Documents/master/TFM/code/checkpoints', 'path_to_cifarfs': '/Users/jdieguez/Documents/master/TFM/code/cifar-fs/', 'path_to_fc100': '/path/to/your/fc100/', 'path_to_miniimagenet': '/path/to/your/miniimagenet', 'path_to_tieredimagenet': '/path/to/your/tiredimagenet', 'max_epoch': 50, 'test_batch': 600, 'shot': 1, 'query': 15, 'test_way': 5, 'feat_size': 640, 'semantic_size': 512, 'batch_size': 128, 'num_workers': 8, 'drop': 0.0, 'lr': 0.0001, 'step_size': 30, 'mode': 'clip', 'text_type': 'gpt', 'test-batch': 600, 'seed': 13, 'model_path': '/Users/jdieguez/Documents/master/TFM/code/checkpoints/ResNet-CIFAR-FS.pth', 'work_dir': 'resnet_CIFAR-FS_clip_gpt_mean_1', 'val': '/Users/jdieguez/Documents/master/TFM/code/cifar-fs//val', 'train': '/Users/jdieguez/Documents/master/TFM/code/cifar-fs/train', '_wandb': {}}
+2025-03-05 17:23:18,384 INFO    MainThread:68378 [wandb_init.py:init():776] wandb.init() called while a run is active
+2025-03-05 17:25:26,412 INFO    MainThread:68378 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-05 17:25:26,415 INFO    MainThread:68378 [wandb_init.py:_pause_backend():564] pausing backend
+2025-03-05 17:25:26,703 INFO    MsgRouterThr:68378 [mailbox.py:close():129] Closing mailbox, abandoning 1 handles.

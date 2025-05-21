@@ -1,0 +1,32 @@
+2025-03-05 17:06:21,355 - train.py[line:50] - INFO: {}
+96
+100%|██████████| 301/301 [02:12<00:00,  2.28it/s]
+2025-03-05 17:08:37,018 - train.py[line:158] - INFO: [Epoch 0/50] [recon loss: 0.113783]
+100%|██████████| 600/600 [03:24<00:00,  2.93it/s]
+2025-03-05 17:12:04,074 - train.py[line:225] - INFO: best epoch: 0
+save 0
+2025-03-05 17:12:04,165 - train.py[line:230] - INFO: epoch: 0 |origin acc: 62.37+0.92% |complete acc: 67.78+0.91% |gap: 5.41/5.41 |k: 0.02
+2025-03-05 17:12:04,168 - train.py[line:234] - INFO: ACC |proto acc: 62.37+0.92% |gen acc: 67.75+0.92% |Max: 67.78
+100%|██████████| 301/301 [02:12<00:00,  2.27it/s]
+2025-03-05 17:14:16,955 - train.py[line:158] - INFO: [Epoch 1/50] [recon loss: 0.060637]
+ 87%|████████▋ | 524/600 [03:08<00:27,  2.78it/s]
+[34m[1mwandb[0m: [33mWARNING[0m Calling wandb.login() after wandb.init() has no effect.
+2025-03-05 17:23:18,387 - train.py[line:50] - INFO: {}
+2025-03-05 17:23:18,387 - train.py[line:50] - INFO: {}
+96
+ 71%|███████   | 214/301 [01:46<00:20,  4.30it/s]Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x115d2e700>
+Traceback (most recent call last):
+  File "/Users/jdieguez/anaconda3/envs/tfm/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1479, in __del__
+    self._shutdown_workers()
+  File "/Users/jdieguez/anaconda3/envs/tfm/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1443, in _shutdown_workers
+    w.join(timeout=_utils.MP_STATUS_CHECK_INTERVAL)
+  File "/Users/jdieguez/anaconda3/envs/tfm/lib/python3.8/multiprocessing/process.py", line 149, in join
+    res = self._popen.wait(timeout)
+  File "/Users/jdieguez/anaconda3/envs/tfm/lib/python3.8/multiprocessing/popen_fork.py", line 44, in wait
+    if not wait([self.sentinel], timeout):
+  File "/Users/jdieguez/anaconda3/envs/tfm/lib/python3.8/multiprocessing/connection.py", line 931, in wait
+    ready = selector.select(timeout)
+  File "/Users/jdieguez/anaconda3/envs/tfm/lib/python3.8/selectors.py", line 415, in select
+    fd_event_list = self._selector.poll(timeout)
+KeyboardInterrupt:
+ 71%|███████   | 214/301 [02:00<00:49,  1.77it/s]

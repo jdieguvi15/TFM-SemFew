@@ -1,0 +1,30 @@
+{"time":"2025-03-05T17:32:24.307279+01:00","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/Users/jdieguez/Documents/master/TFM/code/TFM-SemFew/Model/wandb/run-20250305_173224-m5etfpzs/logs/debug-core.log"}
+{"time":"2025-03-05T17:32:24.49767+01:00","level":"INFO","msg":"created new stream","id":"m5etfpzs"}
+{"time":"2025-03-05T17:32:24.498668+01:00","level":"INFO","msg":"stream: started","id":"m5etfpzs"}
+{"time":"2025-03-05T17:32:24.498765+01:00","level":"INFO","msg":"handler: started","stream_id":"m5etfpzs"}
+{"time":"2025-03-05T17:32:24.498805+01:00","level":"INFO","msg":"sender: started","stream_id":"m5etfpzs"}
+{"time":"2025-03-05T17:32:24.499+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"m5etfpzs"}
+{"time":"2025-03-05T17:32:25.073253+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-05T17:57:27.911542+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/joeldvd/SemFew_recreate/m5etfpzs/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-05T17:57:30.15801+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/joeldvd/SemFew_recreate/m5etfpzs/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-05T17:59:06.296036+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/joeldvd/SemFew_recreate/m5etfpzs/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-05T17:59:57.544047+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/joeldvd/SemFew_recreate/m5etfpzs/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-05T18:00:01.789145+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 192.168.1.131:61087->35.186.228.49:443: read: can't assign requested address"}
+{"time":"2025-03-05T18:00:03.942873+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-05T18:00:08.728232+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-05T18:01:26.61477+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-05T18:01:27.394551+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/joeldvd/SemFew_recreate/m5etfpzs/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-05T18:06:15.197462+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-05T18:10:34.730083+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/joeldvd/SemFew_recreate/m5etfpzs/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-05T18:13:36.676149+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-05T18:15:59.862805+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/joeldvd/SemFew_recreate/m5etfpzs/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-05T18:17:16.675753+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-05T18:21:42.502966+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-05T18:21:42.514646+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-05T18:21:43.23088+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-05T18:21:43.524806+01:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2025-03-05T18:21:43.565287+01:00","level":"INFO","msg":"stream: closing","id":"m5etfpzs"}
+{"time":"2025-03-05T18:21:43.565317+01:00","level":"INFO","msg":"handler: closed","stream_id":"m5etfpzs"}
+{"time":"2025-03-05T18:21:43.565824+01:00","level":"INFO","msg":"sender: closed","stream_id":"m5etfpzs"}
+{"time":"2025-03-05T18:21:43.565526+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":"m5etfpzs"}
+{"time":"2025-03-05T18:21:43.566485+01:00","level":"INFO","msg":"stream: closed","id":"m5etfpzs"}

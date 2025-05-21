@@ -23,6 +23,7 @@ from data.samplers import CategoriesSampler
 # from data.tiered_imagenet import tieredImageNet
 from logger import loggers
 from model.res12 import Res12
+from model.semantic import generate_semantics
 from model.swin_transformer import swin_tiny
 from utils import Cosine_classifier, count_95acc, transform_val_cifar, transform_train_cifar, \
     transform_train, count_kacc, transform_val
@@ -130,11 +131,14 @@ def train(args):
     optimizer = torch.optim.Adam(H.parameters(), lr=args.lr)
     lr_scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=args.step_size, gamma=0.1)
 
-    if 'ImageNet' in args.dataset:
-        semantic = torch.load('./semantic/imagenet_semantic_{}_{}.pth'.format(args.mode, args.text_type), map_location=device)['semantic_feature']
+    if args.semantics_from == 'default':
+        if 'ImageNet' in args.dataset:
+            semantic = torch.load('./semantic/imagenet_semantic_{}_{}.pth'.format(args.mode, args.text_type), map_location=device)['semantic_feature']
+        else:
+            semantic = torch.load('./semantic/cifar100_semantic_{}_{}.pth'.format(args.mode, args.text_type), map_location=device)['semantic_feature']
+        semantic = {k: v.float() for k, v in semantic.items()}
     else:
-        semantic = torch.load('./semantic/cifar100_semantic_{}_{}.pth'.format(args.mode, args.text_type), map_location=device)['semantic_feature']
-    semantic = {k: v.float() for k, v in semantic.items()}
+        semantic = generate_semantics(args)
 
     gap_acc = -1
     max_acc1 = 0.0
@@ -159,9 +163,6 @@ def train(args):
             "[Epoch %d/%d] [recon loss: %f] "
             % (epoch, args.max_epoch, recon_loss.item(),)
         )
-        
-        if use_wandb:
-            wandb.log({"recon_loss": recon_loss.item()})
 
         lr_scheduler.step()
 
@@ -234,7 +235,15 @@ def train(args):
             log.info('ACC |proto acc: %.2f+%.2f%% |gen acc: %.2f+%.2f%% |Max: %.2f' % (
                 O_acc * 100, O_95 * 100, G_acc * 100, G_95 * 100, 100 * max_acc1))
 
+            if use_wandb:
+                wandb.log({"recon_loss": recon_loss.item(), "complete_acc": max_acc['acc'] * 100 })
+
     writer.close()
+
+    if use_wandb:
+        wandb.finish()
+
+    return model
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()

@@ -1,0 +1,42 @@
+{
+  "os":  "macOS-10.16-x86_64-i386-64bit",
+  "python":  "CPython 3.8.20",
+  "startedAt":  "2025-03-05T16:32:24.298461Z",
+  "program":  "master/TFM/code/TFM-SemFew/recreate_SemFew.ipynb",
+  "git":  {
+    "remote":  "https://github.com/jdieguvi15/TFM-SemFew.git",
+    "commit":  "1f4e27db10712c5e9ab81bfb67892ce823224011"
+  },
+  "email":  "jaajaaje@gmail.com",
+  "root":  "/Users/jdieguez/Documents/master/TFM/code/TFM-SemFew/Model",
+  "host":  "D9DK4KY7L0.crg.es",
+  "executable":  "/Users/jdieguez/anaconda3/envs/tfm/bin/python",
+  "cpu_count":  8,
+  "cpu_count_logical":  8,
+  "disk":  {
+    "/":  {
+      "total":  "494384795648",
+      "used":  "414314381312"
+    },
+    "/System/Volumes/Data":  {
+      "total":  "494384795648",
+      "used":  "414314381312"
+    }
+  },
+  "memory":  {
+    "total":  "8589934592"
+  },
+  "cpu":  {
+    "count":  8,
+    "countLogical":  8
+  },
+  "apple":  {
+    "name":  "Unknown",
+    "ecpuCores":  4,
+    "pcpuCores":  4,
+    "gpuCores":  10,
+    "memoryGb":  8,
+    "swapTotalBytes":  "17179869184",
+    "ramTotalBytes":  "8589934592"
+  }
+}

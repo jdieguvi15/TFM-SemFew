@@ -89,6 +89,8 @@ def main(args):
         'center': center_mean
     }, 'center_{}_{}.pth'.format(args.dataset, args.backbone))
 
+    return {'center_mean': center_mean, 'center_cluster': center_cluster, 'center': center_mean}
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--dataset', type=str, default='MiniImageNet',

@@ -32,7 +32,7 @@ def set_seed(seed):
         torch.backends.cudnn.deterministic = True  # Ensures deterministic behavior
         torch.backends.cudnn.benchmark = False  # Avoids non-deterministic optimizations
     elif device.type == "mps":
-        torch.set_deterministic(True)
+        torch.use_deterministic_algorithms(True)
         torch.mps.manual_seed(seed)  # MPS has a manual seed function
 
 
@@ -167,7 +167,7 @@ transform_train_224_cifar = transforms.Compose([
     transforms.ToTensor(),
     # transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225))  # ImageNet standard
     transforms.Normalize((0.5071, 0.4866, 0.4409), (0.2009, 0.1984, 0.2023))  # Differs from ImageNet standard!
-])
+]) 
 
 transform_val_224_cifar = transforms.Compose([
     transforms.Resize((resize, resize)),

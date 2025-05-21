@@ -1,0 +1,13 @@
+{"time":"2025-03-05T17:06:20.090105+01:00","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/Users/jdieguez/Documents/master/TFM/code/TFM-SemFew/Model/wandb/run-20250305_170619-j55o6ruk/logs/debug-core.log"}
+{"time":"2025-03-05T17:06:20.237155+01:00","level":"INFO","msg":"created new stream","id":"j55o6ruk"}
+{"time":"2025-03-05T17:06:20.237348+01:00","level":"INFO","msg":"stream: started","id":"j55o6ruk"}
+{"time":"2025-03-05T17:06:20.237365+01:00","level":"INFO","msg":"handler: started","stream_id":"j55o6ruk"}
+{"time":"2025-03-05T17:06:20.237586+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"j55o6ruk"}
+{"time":"2025-03-05T17:06:20.237723+01:00","level":"INFO","msg":"sender: started","stream_id":"j55o6ruk"}
+{"time":"2025-03-05T17:06:20.861819+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-05T17:17:26.055498+01:00","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-03-05T17:23:17.933014+01:00","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-03-05T17:25:26.426572+01:00","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-03-05T17:25:26.717322+01:00","level":"INFO","msg":"stream: closing","id":"j55o6ruk"}
+{"time":"2025-03-05T17:25:26.718261+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-05T17:25:26.725374+01:00","level":"INFO","msg":"Stopped system monitor"}

@@ -88,11 +88,14 @@ def test(args):
     log.info('best epoch: %d %2f' % (best_epoch, best_acc * 100))
     log.info('best k: %2f' % (float(best_k)))
 
-    if 'ImageNet' in args.dataset:
-        semantic = torch.load('./semantic/imagenet_semantic_{}_{}.pth'.format(args.mode, args.text_type), map_location=device)['semantic_feature']
+    if args.semantics_from == 'default':
+        if 'ImageNet' in args.dataset:
+            semantic = torch.load('./semantic/imagenet_semantic_{}_{}.pth'.format(args.mode, args.text_type), map_location=device)['semantic_feature']
+        else:
+            semantic = torch.load('./semantic/cifar100_semantic_{}_{}.pth'.format(args.mode, args.text_type), map_location=device)['semantic_feature']
+        semantic = {k: v.float() for k, v in semantic.items()}
     else:
-        semantic = torch.load('./semantic/cifar100_semantic_{}_{}.pth'.format(args.mode, args.text_type), map_location=device)['semantic_feature']
-    semantic = {k: v.float() for k, v in semantic.items()}
+        semantic = generate_semantics(args)
 
     ks = np.arange(0, 101) * 0.01
     #label = torch.arange(args.test_way).repeat(args.query).type(torch.cuda.LongTensor)

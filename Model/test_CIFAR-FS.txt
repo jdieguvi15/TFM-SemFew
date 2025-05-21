@@ -1,0 +1,197 @@
+2025-03-25 16:55:54,111 - 3397783523.py[line:26] - INFO: {}
+2025-03-25 16:57:40,490 - 3397783523.py[line:26] - INFO: {}
+2025-03-25 16:57:40,490 - 3397783523.py[line:26] - INFO: {}
+2025-03-25 16:58:16,633 - 3397783523.py[line:26] - INFO: {}
+2025-03-25 16:58:16,633 - 3397783523.py[line:26] - INFO: {}
+2025-03-25 16:58:16,633 - 3397783523.py[line:26] - INFO: {}
+2025-03-25 16:59:18,547 - 3397783523.py[line:26] - INFO: {}
+2025-03-25 16:59:18,547 - 3397783523.py[line:26] - INFO: {}
+2025-03-25 16:59:18,547 - 3397783523.py[line:26] - INFO: {}
+2025-03-25 16:59:18,547 - 3397783523.py[line:26] - INFO: {}
+2025-03-25 17:00:16,844 - 3397783523.py[line:26] - INFO: {}
+2025-03-25 17:00:16,844 - 3397783523.py[line:26] - INFO: {}
+2025-03-25 17:00:16,844 - 3397783523.py[line:26] - INFO: {}
+2025-03-25 17:00:16,844 - 3397783523.py[line:26] - INFO: {}
+2025-03-25 17:00:16,844 - 3397783523.py[line:26] - INFO: {}
+2025-03-25 17:00:33,339 - 3397783523.py[line:26] - INFO: {}
+2025-03-25 17:00:33,339 - 3397783523.py[line:26] - INFO: {}
+2025-03-25 17:00:33,339 - 3397783523.py[line:26] - INFO: {}
+2025-03-25 17:00:33,339 - 3397783523.py[line:26] - INFO: {}
+2025-03-25 17:00:33,339 - 3397783523.py[line:26] - INFO: {}
+2025-03-25 17:00:33,339 - 3397783523.py[line:26] - INFO: {}
+2025-03-25 17:01:00,846 - 3397783523.py[line:26] - INFO: {}
+2025-03-25 17:01:00,846 - 3397783523.py[line:26] - INFO: {}
+2025-03-25 17:01:00,846 - 3397783523.py[line:26] - INFO: {}
+2025-03-25 17:01:00,846 - 3397783523.py[line:26] - INFO: {}
+2025-03-25 17:01:00,846 - 3397783523.py[line:26] - INFO: {}
+2025-03-25 17:01:00,846 - 3397783523.py[line:26] - INFO: {}
+2025-03-25 17:01:00,846 - 3397783523.py[line:26] - INFO: {}
+2025-03-25 17:02:46,195 - 2777244836.py[line:29] - INFO: {}
+2025-03-25 17:02:46,195 - 2777244836.py[line:29] - INFO: {}
+2025-03-25 17:02:46,195 - 2777244836.py[line:29] - INFO: {}
+2025-03-25 17:02:46,195 - 2777244836.py[line:29] - INFO: {}
+2025-03-25 17:02:46,195 - 2777244836.py[line:29] - INFO: {}
+2025-03-25 17:02:46,195 - 2777244836.py[line:29] - INFO: {}
+2025-03-25 17:02:46,195 - 2777244836.py[line:29] - INFO: {}
+2025-03-25 17:02:46,195 - 2777244836.py[line:29] - INFO: {}
+2025-03-25 17:03:48,094 - 3919888966.py[line:28] - INFO: {}
+2025-03-25 17:03:48,094 - 3919888966.py[line:28] - INFO: {}
+2025-03-25 17:03:48,094 - 3919888966.py[line:28] - INFO: {}
+2025-03-25 17:03:48,094 - 3919888966.py[line:28] - INFO: {}
+2025-03-25 17:03:48,094 - 3919888966.py[line:28] - INFO: {}
+2025-03-25 17:03:48,094 - 3919888966.py[line:28] - INFO: {}
+2025-03-25 17:03:48,094 - 3919888966.py[line:28] - INFO: {}
+2025-03-25 17:03:48,094 - 3919888966.py[line:28] - INFO: {}
+2025-03-25 17:03:48,094 - 3919888966.py[line:28] - INFO: {}
+2025-03-25 17:07:03,246 - 3397783523.py[line:26] - INFO: {}
+2025-03-25 17:08:32,498 - 3397783523.py[line:26] - INFO: {}
+2025-03-25 17:08:33,190 - 3397783523.py[line:87] - INFO: best epoch: 3 75.457779
+2025-03-25 17:08:33,192 - 3397783523.py[line:88] - INFO: best k: 0.070000
+2025-03-25 17:09:19,393 - 3397783523.py[line:125] - INFO: max |k:             0.07 |mix acc: 80.56+0.78% |gap: 8.98
+2025-03-25 17:09:19,395 - 3397783523.py[line:127] - INFO: ACC:|proto acc: 71.59+0.88% |gen acc: 80.00+0.78%
+2025-03-25 17:54:54,253 - 3053905847.py[line:3] - INFO: {}
+2025-03-25 17:54:54,253 - 3053905847.py[line:3] - INFO: {}
+2025-03-25 17:56:06,737 - 4072985790.py[line:3] - INFO: {}
+2025-03-25 17:56:06,737 - 4072985790.py[line:3] - INFO: {}
+2025-03-25 17:56:06,737 - 4072985790.py[line:3] - INFO: {}
+2025-03-25 17:56:08,166 - 2374412962.py[line:86] - INFO: best epoch: 3 75.457779
+2025-03-25 17:56:08,166 - 2374412962.py[line:86] - INFO: best epoch: 3 75.457779
+2025-03-25 17:56:08,166 - 2374412962.py[line:86] - INFO: best epoch: 3 75.457779
+2025-03-25 17:56:08,172 - 2374412962.py[line:87] - INFO: best k: 0.070000
+2025-03-25 17:56:08,172 - 2374412962.py[line:87] - INFO: best k: 0.070000
+2025-03-25 17:56:08,172 - 2374412962.py[line:87] - INFO: best k: 0.070000
+2025-03-25 17:57:26,395 - 4072985790.py[line:3] - INFO: {}
+2025-03-25 17:57:26,395 - 4072985790.py[line:3] - INFO: {}
+2025-03-25 17:57:26,395 - 4072985790.py[line:3] - INFO: {}
+2025-03-25 17:57:26,395 - 4072985790.py[line:3] - INFO: {}
+2025-03-25 17:57:42,315 - 2167057268.py[line:3] - INFO: {}
+2025-03-25 17:57:42,315 - 2167057268.py[line:3] - INFO: {}
+2025-03-25 17:57:42,315 - 2167057268.py[line:3] - INFO: {}
+2025-03-25 17:57:42,315 - 2167057268.py[line:3] - INFO: {}
+2025-03-25 17:57:42,315 - 2167057268.py[line:3] - INFO: {}
+2025-03-25 17:57:43,588 - 2459639335.py[line:92] - INFO: best epoch: 3 75.457779
+2025-03-25 17:57:43,588 - 2459639335.py[line:92] - INFO: best epoch: 3 75.457779
+2025-03-25 17:57:43,588 - 2459639335.py[line:92] - INFO: best epoch: 3 75.457779
+2025-03-25 17:57:43,588 - 2459639335.py[line:92] - INFO: best epoch: 3 75.457779
+2025-03-25 17:57:43,588 - 2459639335.py[line:92] - INFO: best epoch: 3 75.457779
+2025-03-25 17:57:43,594 - 2459639335.py[line:93] - INFO: best k: 0.070000
+2025-03-25 17:57:43,594 - 2459639335.py[line:93] - INFO: best k: 0.070000
+2025-03-25 17:57:43,594 - 2459639335.py[line:93] - INFO: best k: 0.070000
+2025-03-25 17:57:43,594 - 2459639335.py[line:93] - INFO: best k: 0.070000
+2025-03-25 17:57:43,594 - 2459639335.py[line:93] - INFO: best k: 0.070000
+2025-03-25 18:00:41,997 - base_events.py[line:1707] - ERROR: Task was destroyed but it is pending!
+task: <Task pending name='Task-3' coro=<Kernel.poll_control_queue() running at /Users/jdieguez/anaconda3/envs/tfm/lib/python3.8/site-packages/ipykernel/kernelbase.py:309> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x1c80da3a0>()]> cb=[_chain_future.<locals>._call_set_state() at /Users/jdieguez/anaconda3/envs/tfm/lib/python3.8/asyncio/futures.py:367]>
+2025-03-25 18:00:41,997 - base_events.py[line:1707] - ERROR: Task was destroyed but it is pending!
+task: <Task pending name='Task-3' coro=<Kernel.poll_control_queue() running at /Users/jdieguez/anaconda3/envs/tfm/lib/python3.8/site-packages/ipykernel/kernelbase.py:309> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x1c80da3a0>()]> cb=[_chain_future.<locals>._call_set_state() at /Users/jdieguez/anaconda3/envs/tfm/lib/python3.8/asyncio/futures.py:367]>
+2025-03-25 18:00:41,997 - base_events.py[line:1707] - ERROR: Task was destroyed but it is pending!
+task: <Task pending name='Task-3' coro=<Kernel.poll_control_queue() running at /Users/jdieguez/anaconda3/envs/tfm/lib/python3.8/site-packages/ipykernel/kernelbase.py:309> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x1c80da3a0>()]> cb=[_chain_future.<locals>._call_set_state() at /Users/jdieguez/anaconda3/envs/tfm/lib/python3.8/asyncio/futures.py:367]>
+2025-03-25 18:00:41,997 - base_events.py[line:1707] - ERROR: Task was destroyed but it is pending!
+task: <Task pending name='Task-3' coro=<Kernel.poll_control_queue() running at /Users/jdieguez/anaconda3/envs/tfm/lib/python3.8/site-packages/ipykernel/kernelbase.py:309> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x1c80da3a0>()]> cb=[_chain_future.<locals>._call_set_state() at /Users/jdieguez/anaconda3/envs/tfm/lib/python3.8/asyncio/futures.py:367]>
+2025-03-25 18:00:41,997 - base_events.py[line:1707] - ERROR: Task was destroyed but it is pending!
+task: <Task pending name='Task-3' coro=<Kernel.poll_control_queue() running at /Users/jdieguez/anaconda3/envs/tfm/lib/python3.8/site-packages/ipykernel/kernelbase.py:309> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x1c80da3a0>()]> cb=[_chain_future.<locals>._call_set_state() at /Users/jdieguez/anaconda3/envs/tfm/lib/python3.8/asyncio/futures.py:367]>
+2025-03-25 18:00:57,574 - 2167057268.py[line:3] - INFO: {}
+2025-03-25 18:02:37,363 - 771334087.py[line:3] - INFO: {}
+2025-03-25 18:02:37,363 - 771334087.py[line:3] - INFO: {}
+2025-03-25 18:02:38,099 - 1652346341.py[line:92] - INFO: best epoch: 3 75.457779
+2025-03-25 18:02:38,099 - 1652346341.py[line:92] - INFO: best epoch: 3 75.457779
+2025-03-25 18:02:38,100 - 1652346341.py[line:93] - INFO: best k: 0.070000
+2025-03-25 18:02:38,100 - 1652346341.py[line:93] - INFO: best k: 0.070000
+2025-03-25 18:04:05,671 - 1659006071.py[line:3] - INFO: {}
+2025-03-25 18:04:05,671 - 1659006071.py[line:3] - INFO: {}
+2025-03-25 18:04:05,671 - 1659006071.py[line:3] - INFO: {}
+2025-03-25 18:04:07,149 - 1652346341.py[line:92] - INFO: best epoch: 3 75.457779
+2025-03-25 18:04:07,149 - 1652346341.py[line:92] - INFO: best epoch: 3 75.457779
+2025-03-25 18:04:07,149 - 1652346341.py[line:92] - INFO: best epoch: 3 75.457779
+2025-03-25 18:04:07,150 - 1652346341.py[line:93] - INFO: best k: 0.070000
+2025-03-25 18:04:07,150 - 1652346341.py[line:93] - INFO: best k: 0.070000
+2025-03-25 18:04:07,150 - 1652346341.py[line:93] - INFO: best k: 0.070000
+2025-04-09 11:50:11,792 - _client.py[line:1025] - INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-04-09 11:50:11,792 - _client.py[line:1025] - INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-04-09 11:50:11,792 - _client.py[line:1025] - INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-04-09 11:50:11,792 - _client.py[line:1025] - INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-04-09 11:50:11,792 - _client.py[line:1025] - INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-04-09 11:50:11,792 - _client.py[line:1025] - INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-04-09 11:50:11,792 - _client.py[line:1025] - INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-04-09 11:50:11,792 - _client.py[line:1025] - INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-04-09 11:50:11,792 - _client.py[line:1025] - INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-04-09 11:55:12,872 - _client.py[line:1025] - INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-04-09 11:55:12,872 - _client.py[line:1025] - INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-04-09 11:55:12,872 - _client.py[line:1025] - INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-04-09 11:55:12,872 - _client.py[line:1025] - INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-04-09 11:55:12,872 - _client.py[line:1025] - INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-04-09 11:55:12,872 - _client.py[line:1025] - INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-04-09 11:55:12,872 - _client.py[line:1025] - INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-04-09 11:55:12,872 - _client.py[line:1025] - INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-04-09 11:55:12,872 - _client.py[line:1025] - INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-04-09 11:55:12,886 - _base_client.py[line:1051] - INFO: Retrying request to /chat/completions in 0.467624 seconds
+2025-04-09 11:55:12,886 - _base_client.py[line:1051] - INFO: Retrying request to /chat/completions in 0.467624 seconds
+2025-04-09 11:55:12,886 - _base_client.py[line:1051] - INFO: Retrying request to /chat/completions in 0.467624 seconds
+2025-04-09 11:55:12,886 - _base_client.py[line:1051] - INFO: Retrying request to /chat/completions in 0.467624 seconds
+2025-04-09 11:55:12,886 - _base_client.py[line:1051] - INFO: Retrying request to /chat/completions in 0.467624 seconds
+2025-04-09 11:55:12,886 - _base_client.py[line:1051] - INFO: Retrying request to /chat/completions in 0.467624 seconds
+2025-04-09 11:55:12,886 - _base_client.py[line:1051] - INFO: Retrying request to /chat/completions in 0.467624 seconds
+2025-04-09 11:55:12,886 - _base_client.py[line:1051] - INFO: Retrying request to /chat/completions in 0.467624 seconds
+2025-04-09 11:55:12,886 - _base_client.py[line:1051] - INFO: Retrying request to /chat/completions in 0.467624 seconds
+2025-04-09 11:55:13,529 - _client.py[line:1025] - INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-04-09 11:55:13,529 - _client.py[line:1025] - INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-04-09 11:55:13,529 - _client.py[line:1025] - INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-04-09 11:55:13,529 - _client.py[line:1025] - INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-04-09 11:55:13,529 - _client.py[line:1025] - INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-04-09 11:55:13,529 - _client.py[line:1025] - INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-04-09 11:55:13,529 - _client.py[line:1025] - INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-04-09 11:55:13,529 - _client.py[line:1025] - INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-04-09 11:55:13,529 - _client.py[line:1025] - INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-04-09 11:55:13,543 - _base_client.py[line:1051] - INFO: Retrying request to /chat/completions in 0.828686 seconds
+2025-04-09 11:55:13,543 - _base_client.py[line:1051] - INFO: Retrying request to /chat/completions in 0.828686 seconds
+2025-04-09 11:55:13,543 - _base_client.py[line:1051] - INFO: Retrying request to /chat/completions in 0.828686 seconds
+2025-04-09 11:55:13,543 - _base_client.py[line:1051] - INFO: Retrying request to /chat/completions in 0.828686 seconds
+2025-04-09 11:55:13,543 - _base_client.py[line:1051] - INFO: Retrying request to /chat/completions in 0.828686 seconds
+2025-04-09 11:55:13,543 - _base_client.py[line:1051] - INFO: Retrying request to /chat/completions in 0.828686 seconds
+2025-04-09 11:55:13,543 - _base_client.py[line:1051] - INFO: Retrying request to /chat/completions in 0.828686 seconds
+2025-04-09 11:55:13,543 - _base_client.py[line:1051] - INFO: Retrying request to /chat/completions in 0.828686 seconds
+2025-04-09 11:55:13,543 - _base_client.py[line:1051] - INFO: Retrying request to /chat/completions in 0.828686 seconds
+2025-04-09 11:55:14,537 - _client.py[line:1025] - INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-04-09 11:55:14,537 - _client.py[line:1025] - INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-04-09 11:55:14,537 - _client.py[line:1025] - INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-04-09 11:55:14,537 - _client.py[line:1025] - INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-04-09 11:55:14,537 - _client.py[line:1025] - INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-04-09 11:55:14,537 - _client.py[line:1025] - INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-04-09 11:55:14,537 - _client.py[line:1025] - INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-04-09 11:55:14,537 - _client.py[line:1025] - INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-04-09 11:55:14,537 - _client.py[line:1025] - INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-04-09 13:19:31,259 - _client.py[line:1025] - INFO: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2025-04-09 13:19:31,259 - _client.py[line:1025] - INFO: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2025-04-09 13:19:31,259 - _client.py[line:1025] - INFO: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2025-04-09 13:19:31,259 - _client.py[line:1025] - INFO: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2025-04-09 13:19:31,259 - _client.py[line:1025] - INFO: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2025-04-09 13:19:31,259 - _client.py[line:1025] - INFO: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2025-04-09 13:19:31,259 - _client.py[line:1025] - INFO: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2025-04-09 13:19:31,259 - _client.py[line:1025] - INFO: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2025-04-09 13:19:31,259 - _client.py[line:1025] - INFO: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2025-04-09 13:25:14,288 - _client.py[line:1025] - INFO: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-04-09 13:25:14,288 - _client.py[line:1025] - INFO: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-04-09 13:25:14,288 - _client.py[line:1025] - INFO: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-04-09 13:25:14,288 - _client.py[line:1025] - INFO: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-04-09 13:25:14,288 - _client.py[line:1025] - INFO: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-04-09 13:25:14,288 - _client.py[line:1025] - INFO: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-04-09 13:25:14,288 - _client.py[line:1025] - INFO: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-04-09 13:25:14,288 - _client.py[line:1025] - INFO: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-04-09 13:25:14,288 - _client.py[line:1025] - INFO: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-04-09 13:29:03,159 - _client.py[line:1025] - INFO: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-04-09 13:29:03,159 - _client.py[line:1025] - INFO: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-04-09 13:29:03,159 - _client.py[line:1025] - INFO: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-04-09 13:29:03,159 - _client.py[line:1025] - INFO: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-04-09 13:29:03,159 - _client.py[line:1025] - INFO: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-04-09 13:29:03,159 - _client.py[line:1025] - INFO: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-04-09 13:29:03,159 - _client.py[line:1025] - INFO: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-04-09 13:29:03,159 - _client.py[line:1025] - INFO: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-04-09 13:29:03,159 - _client.py[line:1025] - INFO: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-04-09 13:32:33,014 - _client.py[line:1025] - INFO: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-09 13:32:33,014 - _client.py[line:1025] - INFO: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-09 13:32:33,014 - _client.py[line:1025] - INFO: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-09 13:32:33,014 - _client.py[line:1025] - INFO: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-09 13:32:33,014 - _client.py[line:1025] - INFO: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-09 13:32:33,014 - _client.py[line:1025] - INFO: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-09 13:32:33,014 - _client.py[line:1025] - INFO: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-09 13:32:33,014 - _client.py[line:1025] - INFO: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-09 13:32:33,014 - _client.py[line:1025] - INFO: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"

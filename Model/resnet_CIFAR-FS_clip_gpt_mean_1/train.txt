@@ -3,3 +3,31 @@
 2025-03-05 16:57:33,033 - train.py[line:50] - INFO: {}
 2025-03-05 16:59:15,376 - train.py[line:158] - INFO: [Epoch 0/50] [recon loss: 0.111771] 
 2025-03-05 16:59:15,376 - train.py[line:158] - INFO: [Epoch 0/50] [recon loss: 0.111771] 
+2025-03-05 17:06:21,355 - train.py[line:50] - INFO: {}
+2025-03-05 17:08:37,018 - train.py[line:158] - INFO: [Epoch 0/50] [recon loss: 0.113783] 
+2025-03-05 17:12:04,074 - train.py[line:225] - INFO: best epoch: 0
+2025-03-05 17:12:04,165 - train.py[line:230] - INFO: epoch: 0 |origin acc: 62.37+0.92% |complete acc: 67.78+0.91% |gap: 5.41/5.41 |k: 0.02
+2025-03-05 17:12:04,168 - train.py[line:234] - INFO: ACC |proto acc: 62.37+0.92% |gen acc: 67.75+0.92% |Max: 67.78
+2025-03-05 17:14:16,955 - train.py[line:158] - INFO: [Epoch 1/50] [recon loss: 0.060637] 
+2025-03-05 17:23:18,387 - train.py[line:50] - INFO: {}
+2025-03-05 17:23:18,387 - train.py[line:50] - INFO: {}
+2025-03-05 17:32:25,422 - train.py[line:50] - INFO: {}
+2025-03-05 17:35:17,307 - train.py[line:158] - INFO: [Epoch 0/5] [recon loss: 0.085017] 
+2025-03-05 17:40:03,165 - train.py[line:222] - INFO: best epoch: 0
+2025-03-05 17:40:03,253 - train.py[line:227] - INFO: epoch: 0 |origin acc: 63.59+0.93% |complete acc: 69.01+0.90% |gap: 5.42/5.42 |k: 0.01
+2025-03-05 17:40:03,255 - train.py[line:231] - INFO: ACC |proto acc: 63.59+0.93% |gen acc: 68.96+0.90% |Max: 69.01
+2025-03-05 17:42:01,200 - train.py[line:158] - INFO: [Epoch 1/5] [recon loss: 0.095642] 
+2025-03-05 17:45:17,335 - train.py[line:222] - INFO: best epoch: 1
+2025-03-05 17:45:17,356 - train.py[line:227] - INFO: epoch: 1 |origin acc: 62.55+0.99% |complete acc: 72.38+0.81% |gap: 9.83/9.83 |k: 0.0
+2025-03-05 17:45:17,361 - train.py[line:231] - INFO: ACC |proto acc: 62.55+0.99% |gen acc: 72.38+0.81% |Max: 72.38
+2025-03-05 17:47:14,151 - train.py[line:158] - INFO: [Epoch 2/5] [recon loss: 0.044371] 
+2025-03-05 17:50:23,997 - train.py[line:222] - INFO: best epoch: 2
+2025-03-05 17:50:24,008 - train.py[line:227] - INFO: epoch: 2 |origin acc: 63.17+0.92% |complete acc: 74.79+0.77% |gap: 11.62/11.62 |k: 0.03
+2025-03-05 17:50:24,014 - train.py[line:231] - INFO: ACC |proto acc: 63.17+0.92% |gen acc: 74.77+0.77% |Max: 74.79
+2025-03-05 17:52:07,069 - train.py[line:158] - INFO: [Epoch 3/5] [recon loss: 0.074174] 
+2025-03-05 18:14:42,282 - train.py[line:222] - INFO: best epoch: 3
+2025-03-05 18:14:42,302 - train.py[line:227] - INFO: epoch: 3 |origin acc: 62.64+0.94% |complete acc: 75.46+0.75% |gap: 12.82/12.82 |k: 0.07
+2025-03-05 18:14:42,306 - train.py[line:231] - INFO: ACC |proto acc: 62.64+0.94% |gen acc: 75.28+0.75% |Max: 75.46
+2025-03-05 18:18:06,526 - train.py[line:158] - INFO: [Epoch 4/5] [recon loss: 0.044076] 
+2025-03-05 18:21:42,447 - train.py[line:227] - INFO: epoch: 4 |origin acc: 62.03+0.97% |complete acc: 75.35+0.75% |gap: 13.32/13.32 |k: 0.04
+2025-03-05 18:21:42,456 - train.py[line:231] - INFO: ACC |proto acc: 62.03+0.97% |gen acc: 75.17+0.74% |Max: 75.46
