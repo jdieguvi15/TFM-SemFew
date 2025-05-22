@@ -80,7 +80,7 @@ def generate_descriptions(args):
                     print(f"❌ Error with class {cls}: {e}")
                     class_descriptions[cls] = None
 
-        elif:
+        elif args['semantics_from'] == 'text':
             for cls in class_names:
                 # Build the prompt
                 messages = [
@@ -160,7 +160,7 @@ def generate_semantics(args):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--llm', type=str, choices=["groq"], default="groq")
-    parser.add_argument('--semantics_from', type=str, default="dafault", choices=["default", "images", "description"])
+    parser.add_argument('--semantics_from', type=str, default="dafault", choices=["default", "images", "text"])
     parser.add_argument('--key', type=str)
     parser.add_argument('--images_per_class', type=int, default=5)
     parser.add_argument('--verbose', default=False, action="store_true")
