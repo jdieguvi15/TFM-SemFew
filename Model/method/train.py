@@ -39,7 +39,7 @@ def train(args):
             name=args["run_name"],
             config=args)
             
-    args.work_dir = '{}_{}_{}_{}_{}_{}'.format(args.backbone, args.dataset, args.mode, args.text_type, args.center, args.shot)
+    args.work_dir = '{}_{}_{}_{}_{}_{}_{}'.format(args.backbone, args.dataset, args.mode, args.text_type, args.center, args.shot, args.llm)
 
     if args.dataset == 'TieredImageNet':
         args.num_workers = 0

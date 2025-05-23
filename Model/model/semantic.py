@@ -34,8 +34,15 @@ def generate_descriptions(args):
         base_path = args.path_to_cifarfs + split
         class_names = sorted([d for d in os.listdir(base_path) if os.path.isdir(os.path.join(base_path, d))])
 
+        if args['semantics_from'] == 'names':
+            class_descriptions = {cls:cls for cls in class_names}
+
+        elif args['semantics_from'] == 'wordnet':
+            with open("./semantic/wn_descriptions.json", 'r') as f:
+                class_descriptions = json.load(f)
+
         
-        if args['semantics_from'] == 'images':
+        elif args['semantics_from'] == 'images':
             # Helper: encode image to base64
             def encode_image(image_path):
                 with open(image_path, "rb") as f:
