@@ -27,7 +27,7 @@ def generate_descriptions(args):
         model = "meta-llama/llama-4-scout-17b-16e-instruct"
 
     if args['semantics_from'] == 'names':
-            return {cls:cls for cls in class_names}
+        return {cls:cls for cls in class_names}
 
     elif args['semantics_from'] == 'wordnet':
         with open("./semantic/wn_descriptions.json", 'r') as f:
