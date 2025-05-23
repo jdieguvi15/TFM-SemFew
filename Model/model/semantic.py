@@ -26,6 +26,13 @@ def generate_descriptions(args):
         client = Groq(api_key=KEY)
         model = "meta-llama/llama-4-scout-17b-16e-instruct"
 
+    if args['semantics_from'] == 'names':
+            return {cls:cls for cls in class_names}
+
+    elif args['semantics_from'] == 'wordnet':
+        with open("./semantic/wn_descriptions.json", 'r') as f:
+            return json.load(f)
+
     # Dictionary to hold descriptions
     class_descriptions = {}
 
@@ -33,14 +40,6 @@ def generate_descriptions(args):
 
         base_path = args.path_to_cifarfs + split
         class_names = sorted([d for d in os.listdir(base_path) if os.path.isdir(os.path.join(base_path, d))])
-
-        if args['semantics_from'] == 'names':
-            class_descriptions = {cls:cls for cls in class_names}
-
-        elif args['semantics_from'] == 'wordnet':
-            with open("./semantic/wn_descriptions.json", 'r') as f:
-                class_descriptions = json.load(f)
-
         
         elif args['semantics_from'] == 'images':
             # Helper: encode image to base64
