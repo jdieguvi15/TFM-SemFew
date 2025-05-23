@@ -41,7 +41,7 @@ def generate_descriptions(args):
         base_path = args.path_to_cifarfs + split
         class_names = sorted([d for d in os.listdir(base_path) if os.path.isdir(os.path.join(base_path, d))])
         
-        elif args['semantics_from'] == 'images':
+        if args['semantics_from'] == 'images':
             # Helper: encode image to base64
             def encode_image(image_path):
                 with open(image_path, "rb") as f:
