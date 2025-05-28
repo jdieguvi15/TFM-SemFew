@@ -9,6 +9,7 @@ from groq import Groq
 from PIL import Image
 from io import BytesIO
 import open_clip
+from openai import OpenAI
 
 def generate_descriptions(args):
 
@@ -25,6 +26,12 @@ def generate_descriptions(args):
     if llm == "groq":
         client = Groq(api_key=KEY)
         model = "meta-llama/llama-4-scout-17b-16e-instruct"
+    elif llm == "gemini":
+        client = OpenAI(
+            base_url="https://openrouter.ai/api/v1",
+            api_key=KEY,
+        )
+        model="google/gemini-2.0-flash-exp:free"
 
     if args['semantics_from'] == 'wordnet':
         with open("./semantic/wn_descriptions.json", 'r') as f:
