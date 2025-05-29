@@ -74,7 +74,7 @@ def generate_descriptions(args):
                 
                 if llm == "gemini":
                     image_paths = [os.path.join(class_folder, img_name) for img_name in selected_images]
-                    imgs = [PIL.Image.open(img_path) for image_path in image_paths]
+                    imgs = [PIL.Image.open(img_path) for img_path in image_paths]
                     response = model.generate_content([text_prompt] + imgs, stream=True)
                     response.resolve()
                     description = response.text.strip()
