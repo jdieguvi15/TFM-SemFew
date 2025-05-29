@@ -33,13 +33,14 @@ def generate_descriptions(args):
         model = genai.GenerativeModel('gemini-1.5-flash')
     elif llm == "groq":
         client = Groq(api_key=KEY)
-        model = "meta-llama/llama-4-scout-17b-16e-instruct"
+        model = "llama3-8b-8192"
     elif llm == "qwen":
         client = OpenAI(
             base_url="https://openrouter.ai/api/v1",
             api_key=KEY,
         )
         model="qwen/qwen2.5-vl-72b-instruct:free"
+    print(model)
 
     if args['semantics_from'] == 'wordnet':
         with open("./semantic/wn_descriptions.json", 'r') as f:
@@ -109,7 +110,7 @@ def generate_descriptions(args):
                             model=model,
                             messages=messages,
                         )
-                        description = response.choices[0].message.content.strip()
+                        description = response.choices[0].message.content
                         class_descriptions[cls] = description
                         if args['verbose']:
                             print(f"✔️ {cls}: Description generated.")
@@ -129,7 +130,7 @@ def generate_descriptions(args):
                     class_descriptions[cls] = description
                     if args['verbose']:
                         print(f"✔️ {cls}: Description generated.")
-                        
+
                 else:
                     # Build the prompt
                     messages = [
