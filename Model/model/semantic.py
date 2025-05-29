@@ -10,6 +10,8 @@ from PIL import Image
 from io import BytesIO
 import open_clip
 from openai import OpenAI
+import PIL.Image
+import google.generativeai as genai
 
 def generate_descriptions(args):
 
@@ -21,17 +23,23 @@ def generate_descriptions(args):
     # Already calculated
     if os.path.exists(json_path):
         with open(json_path, "r") as f:
-            return json.load(f)
+            class_descriptions = json.load(f)
+            if args["verbose"]:
+                print(class_descriptions)
+            return class_descriptions
 
-    if llm == "groq":
+    if llm == "gemini":
+        genai.configure(api_key=KEY)
+        model = genai.GenerativeModel('gemini-1.5-flash')
+    elif llm == "groq":
         client = Groq(api_key=KEY)
         model = "meta-llama/llama-4-scout-17b-16e-instruct"
-    elif llm == "gemini":
+    elif llm == "qwen":
         client = OpenAI(
             base_url="https://openrouter.ai/api/v1",
             api_key=KEY,
         )
-        model="google/gemini-2.0-flash-exp:free"
+        model="qwen/qwen2.5-vl-72b-instruct:free"
 
     if args['semantics_from'] == 'wordnet':
         with open("./semantic/wn_descriptions.json", 'r') as f:
@@ -60,64 +68,91 @@ def generate_descriptions(args):
                 image_files = [f for f in os.listdir(class_folder) if f.endswith(".png")]
                 selected_images = random.sample(image_files, min(args['images_per_class'], len(image_files)))
             
-                image_inputs = []
-                for img_name in selected_images:
-                    image_path = os.path.join(class_folder, img_name)
-                    encoded = encode_image(image_path)
-                    image_inputs.append({
-                        "type": "image_url",
-                        "image_url": {
-                            "url": f"data:image/jpeg;base64,{encoded}"
-                        }
-                    })
             
                 # Build the prompt
-                messages = [
-                    {
-                        "role": "user",
-                        "content": [
-                            {"type": "text", "text": f"These 5 images are examples from the class '{cls}'. Based on these images, give a detailed visual description that summarizes the typical appearance of this class. Briefness is required, using only one paragraph"}
-                        ] + image_inputs
-                    }
-                ]
-            
-                try:
-                    response = client.chat.completions.create(
-                        model=model,
-                        messages=messages,
-                    )
-                    description = response.choices[0].message.content.strip()
+                text_prompt = f"These 5 images are examples from the class '{cls}'. Based on these images, give a detailed visual description that summarizes the typical appearance of this class. Briefness is required, using only one paragraph"
+                
+                if llm == "gemini":
+                    image_paths = [os.path.join(class_folder, img_name) for image_name in selected_images]
+                    imgs = [PIL.Image.open(img_path) for image_path in image_paths]
+                    response = model.generate_content([text_prompt] + imgs, stream=True)
+                    response.resolve()
+                    description = response.text.strip()
+
                     class_descriptions[cls] = description
                     if args['verbose']:
                         print(f"✔️ {cls}: Description generated.")
-                except Exception as e:
-                    print(f"❌ Error with class {cls}: {e}")
-                    class_descriptions[cls] = None
+
+                else:
+                    image_inputs = []
+                    for img_name in selected_images:
+                        image_path = os.path.join(class_folder, img_name)
+                        encoded = encode_image(image_path)
+                        image_inputs.append({
+                            "type": "image_url",
+                            "image_url": {
+                                "url": f"data:image/jpeg;base64,{encoded}"
+                            }
+                        })
+
+                    messages = [
+                        {
+                            "role": "user",
+                            "content": [
+                                {"type": "text", "text": text_prompt}
+                            ] + image_inputs
+                        }
+                    ]
+                
+                    try:
+                        response = client.chat.completions.create(
+                            model=model,
+                            messages=messages,
+                        )
+                        description = response.choices[0].message.content.strip()
+                        class_descriptions[cls] = description
+                        if args['verbose']:
+                            print(f"✔️ {cls}: Description generated.")
+                    except Exception as e:
+                        print(f"❌ Error with class {cls}: {e}")
+                        class_descriptions[cls] = None
 
         elif args['semantics_from'] == 'text':
             for cls in class_names:
-                # Build the prompt
-                messages = [
-                    {
-                        "role": "user",
-                        "content": [
-                            {"type": "text", "text": f"Please write a detailed visual definition of the class {cls}. Make it more visually detailed and consistent with scientific fact for a IA model to differentiate it from this class to other classes like {set(class_names) - set([cls])}. Briefness is required, using only one paragraph."}
-                        ]
-                    }
-                ]
-            
-                try:
-                    response = client.chat.completions.create(
-                        model=model,
-                        messages=messages,
+                text_prompt = f"Please write a detailed visual definition of the class {cls}. Make it more visually detailed and consistent with scientific fact for a IA model to differentiate it from this class to other classes like {set(class_names) - set([cls])}. Briefness is required, using only one paragraph."
+
+                if llm == "gemini":
+                    response = client.models.generate_content(
+                        model="gemini-2.0-flash", contents=text_prompt
                     )
-                    description = response.choices[0].message.content.strip()
+                    description = response.text
                     class_descriptions[cls] = description
                     if args['verbose']:
                         print(f"✔️ {cls}: Description generated.")
-                except Exception as e:
-                    print(f"❌ Error with class {cls}: {e}")
-                    class_descriptions[cls] = None
+                        
+                else:
+                    # Build the prompt
+                    messages = [
+                        {
+                            "role": "user",
+                            "content": [
+                                {"type": "text", "text": text_prompt}
+                            ]
+                        }
+                    ]
+                
+                    try:
+                        response = client.chat.completions.create(
+                            model=model,
+                            messages=messages,
+                        )
+                        description = response.choices[0].message.content.strip()
+                        class_descriptions[cls] = description
+                        if args['verbose']:
+                            print(f"✔️ {cls}: Description generated.")
+                    except Exception as e:
+                        print(f"❌ Error with class {cls}: {e}")
+                        class_descriptions[cls] = None
 
     # Save results to JSON
     with open(json_path, "w") as f:
