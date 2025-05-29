@@ -40,7 +40,6 @@ def generate_descriptions(args):
             api_key=KEY,
         )
         model="qwen/qwen2.5-vl-72b-instruct:free"
-    print(model)
 
     if args['semantics_from'] == 'wordnet':
         with open("./semantic/wn_descriptions.json", 'r') as f:
@@ -74,7 +73,7 @@ def generate_descriptions(args):
                 text_prompt = f"These 5 images are examples from the class '{cls}'. Based on these images, give a detailed visual description that summarizes the typical appearance of this class. Briefness is required, using only one paragraph"
                 
                 if llm == "gemini":
-                    image_paths = [os.path.join(class_folder, img_name) for image_name in selected_images]
+                    image_paths = [os.path.join(class_folder, img_name) for img_name in selected_images]
                     imgs = [PIL.Image.open(img_path) for image_path in image_paths]
                     response = model.generate_content([text_prompt] + imgs, stream=True)
                     response.resolve()
