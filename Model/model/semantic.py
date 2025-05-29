@@ -80,7 +80,6 @@ def generate_descriptions(args):
 
                     max_attempts = 5  # Number of retry attempts
                     success = False
-
                     attempt = 0
                     while attempt < max_attempts and not success:
                         try:
@@ -144,13 +143,31 @@ def generate_descriptions(args):
                 text_prompt = f"Please write a detailed visual definition of the class {cls}. Make it more visually detailed and consistent with scientific fact for a IA model to differentiate it from this class to other classes like {set(class_names) - set([cls])}. Briefness is required, using only one paragraph."
 
                 if llm == "gemini":
-                    response = client.models.generate_content(
-                        model="gemini-2.0-flash", contents=text_prompt
-                    )
-                    description = response.text
-                    class_descriptions[cls] = description
-                    if args['verbose']:
-                        print(f"✔️ {cls}: Description generated.")
+                    max_attempts = 5  # Number of retry attempts
+                    success = False
+                    attempt = 0
+                    while attempt < max_attempts and not success:
+                        try:
+                            response = model.generate_content([text_prompt], stream=True)
+                            response.resolve()
+                            description = response.text.strip()
+                            class_descriptions[cls] = description
+                            success = True
+                            if args['verbose']:
+                                print(f"✔️ {cls}: Description generated.")
+
+                        except ResourceExhausted as e:
+                            retry_delay = 60 #+ attempt * 30
+                            print(f"⚠️ Quota limit reached. Waiting {retry_delay} seconds before retrying... (Attempt {attempt + 1}/{max_attempts})")
+                            time.sleep(retry_delay)
+                            attempt += 1
+
+                        except Exception as e:
+                            print(f"❌ Unexpected error for class '{cls}': {e}")
+                            break
+
+                    if not success:
+                        print(f"❌ Failed to get description for '{cls}' after {max_attempts} attempts.")
 
                 else:
                     # Build the prompt
