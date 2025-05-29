@@ -12,6 +12,7 @@ import open_clip
 from openai import OpenAI
 import PIL.Image
 import google.generativeai as genai
+from google.api_core.exceptions import ResourceExhausted
 
 def generate_descriptions(args):
 
@@ -75,13 +76,33 @@ def generate_descriptions(args):
                 if llm == "gemini":
                     image_paths = [os.path.join(class_folder, img_name) for img_name in selected_images]
                     imgs = [PIL.Image.open(img_path) for img_path in image_paths]
-                    response = model.generate_content([text_prompt] + imgs, stream=True)
-                    response.resolve()
-                    description = response.text.strip()
 
-                    class_descriptions[cls] = description
-                    if args['verbose']:
-                        print(f"✔️ {cls}: Description generated.")
+                    max_attempts = 5  # Number of retry attempts
+                    success = False
+
+                    attempt = 0
+                    while attempt < max_attempts and not success:
+                        try:
+                            response = model.generate_content([text_prompt] + imgs, stream=True)
+                            response.resolve()
+                            description = response.text.strip()
+                            class_descriptions[cls] = description
+                            success = True
+                            if args['verbose']:
+                                print(f"✔️ {cls}: Description generated.")
+
+                        except ResourceExhausted as e:
+                            retry_delay = 60 #+ attempt * 30
+                            print(f"⚠️ Quota limit reached. Waiting {retry_delay} seconds before retrying... (Attempt {attempt + 1}/{max_attempts})")
+                            time.sleep(retry_delay)
+                            attempt += 1
+
+                        except Exception as e:
+                            print(f"❌ Unexpected error for class '{cls}': {e}")
+                            break
+
+                    if not success:
+                        print(f"❌ Failed to get description for '{cls}' after {max_attempts} attempts.")
 
                 else:
                     image_inputs = []
