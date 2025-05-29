@@ -30,7 +30,7 @@ def generate_descriptions(args):
 
     if llm == "gemini":
         genai.configure(api_key=KEY)
-        model = genai.GenerativeModel('gemini-1.5-flash')
+        model = genai.GenerativeModel('gemini-2.0-flash-lite')
     elif llm == "groq":
         client = Groq(api_key=KEY)
         model = "llama3-8b-8192"
