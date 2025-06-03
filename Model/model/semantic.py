@@ -20,7 +20,7 @@ def generate_descriptions(args):
     llm = args['llm']
     KEY = args['key']
 
-    json_path = f"class_descriptions_{args.llm}_{args.semantics_from}.json"
+    json_path = f"class_descriptions_{args.llm}_{args.semantics_from}_{args.file}.json"
 
     # Already calculated
     if os.path.exists(json_path):
