@@ -48,11 +48,11 @@ def generate_descriptions(args):
             return json.load(f)
 
     elif args['semantics_from'] == 'file':
-            with open('../' + args['file'], 'r') as f:
-                class_descriptions = json.load(f)
-                print("hola")
-                print(class_descriptions)
-                return class_descriptions
+        with open('../' + args['file'], 'r') as f:
+            class_descriptions = json.load(f)
+            print("hola")
+            print(class_descriptions)
+            return class_descriptions
 
     # Dictionary to hold descriptions
     class_descriptions = {}
