@@ -47,6 +47,12 @@ def generate_descriptions(args):
         with open("./semantic/wn_descriptions.json", 'r') as f:
             return json.load(f)
 
+    elif args['semantics_from'] == 'file':
+            with open('../' + args['file'], 'r') as f:
+                class_descriptions = json.load(f)
+                print(class_descriptions)
+                return class_descriptions
+
     # Dictionary to hold descriptions
     class_descriptions = {}
 
@@ -58,10 +64,6 @@ def generate_descriptions(args):
         if args['semantics_from'] == 'names':
             for cls in class_names:
                 class_descriptions[cls] = cls
-
-        elif args['semantics_from'] == 'file':
-            with open('../' + args['file'], 'r') as f:
-                class_descriptions = json.load(f)
         
         elif args['semantics_from'] == 'images':
             # Helper: encode image to base64
@@ -235,6 +237,7 @@ def encode_descriptions(args, class_descriptions):
 
 def generate_semantics(args):
     json_path = f"class_encodings_{args.llm}_{args.semantics_from}_{args.file}.json"
+    print(json_path)
     
     # Already calculated
     if os.path.exists(json_path):
