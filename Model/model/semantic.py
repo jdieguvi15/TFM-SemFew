@@ -58,6 +58,10 @@ def generate_descriptions(args):
         if args['semantics_from'] == 'names':
             for cls in class_names:
                 class_descriptions[cls] = cls
+
+        elif args['semantics_from'] == 'file':
+            with open('../' + args['file'], 'r') as f:
+                class_descriptions = json.load(f)
         
         elif args['semantics_from'] == 'images':
             # Helper: encode image to base64
@@ -230,7 +234,7 @@ def encode_descriptions(args, class_descriptions):
 
 
 def generate_semantics(args):
-    json_path = f"class_encodings_{args.llm}_{args.semantics_from}.json"
+    json_path = f"class_encodings_{args.llm}_{args.semantics_from}_{args.file}.json"
     
     # Already calculated
     if os.path.exists(json_path):
@@ -247,8 +251,9 @@ def generate_semantics(args):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--llm', type=str, choices=["groq"], default="default")
-    parser.add_argument('--semantics_from', type=str, default="dafault", choices=["default", "images", "text"])
+    parser.add_argument('--llm', type=str, choices=["gemini", "default", "groq"], default="default")
+    parser.add_argument('--semantics_from', type=str, default="dafault", choices=["default", "images", "text", "file"])
+    parser.add_argument('--file', type=str, default="None")
     parser.add_argument('--key', type=str)
     parser.add_argument('--images_per_class', type=int, default=5)
     parser.add_argument('--verbose', default=False, action="store_true")
