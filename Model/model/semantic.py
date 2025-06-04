@@ -77,7 +77,7 @@ def generate_descriptions(args):
             
             
                 # Build the prompt
-                text_prompt = f"These 5 images are examples from the class '{cls}'. Based on these images, give a detailed visual description that summarizes the typical appearance of this class. Briefness is required, using only one paragraph"
+                text_prompt = f"These 5 images are examples from the class '{cls}'. Based on these images, give a detailed visual description that summarizes the typical appearance of this class. Focus on the content of the images, not the format. Briefness is required, using only one paragraph"
                 
                 if llm == "gemini":
                     image_paths = [os.path.join(class_folder, img_name) for img_name in selected_images]
