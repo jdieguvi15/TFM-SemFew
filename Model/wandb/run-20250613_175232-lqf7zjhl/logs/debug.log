@@ -1,0 +1,25 @@
+2025-06-13 17:52:32,526 INFO    MainThread:9403 [wandb_init.py:setup_run_log_directory():703] Logging user logs to /Users/jdieguez/Documents/master/TFM/code/TFM-SemFew/Model/wandb/run-20250613_175232-lqf7zjhl/logs/debug.log
+2025-06-13 17:52:32,526 INFO    MainThread:9403 [wandb_init.py:setup_run_log_directory():704] Logging internal logs to /Users/jdieguez/Documents/master/TFM/code/TFM-SemFew/Model/wandb/run-20250613_175232-lqf7zjhl/logs/debug-internal.log
+2025-06-13 17:52:32,527 INFO    MainThread:9403 [wandb_init.py:init():831] calling init triggers
+2025-06-13 17:52:32,527 INFO    MainThread:9403 [wandb_init.py:init():836] wandb.init called with sweep_config: {}
+config: {'dataset': 'FC100', 'backbone': 'resnet', 'center': 'mean', 'gpu': 0, 'project': 'SemFew_recreate', 'run_name': 'FC100_default', 'path_to_checkpoints': '/Users/jdieguez/Documents/master/TFM/code/checkpoints', 'path_to_cifarfs': '/Users/jdieguez/Documents/master/TFM/code/cifar-fs/', 'path_to_fc100': '/Users/jdieguez/Documents/master/TFM/code/FC100/', 'path_to_miniimagenet': '/Users/jdieguez/Documents/master/TFM/code/miniimagenet', 'path_to_tieredimagenet': '/path/to/your/tiredimagenet', 'llm': 'default', 'semantics_from': 'default', 'file': 'None', 'key': 'None', 'images_per_class': 5, 'verbose': False, 'max_epoch': 50, 'shot': 1, 'query': 15, 'test_way': 5, 'feat_size': 640, 'semantic_size': 512, 'batch_size': 128, 'num_workers': 8, 'drop': 0.0, 'lr': 0.0001, 'step_size': 30, 'mode': 'clip', 'text_type': 'gpt', 'test-batch': 600, 'seed': 13, 'model_path': '/Users/jdieguez/Documents/master/TFM/code/checkpoints/ResNet-FC100.pth', '_wandb': {}}
+2025-06-13 17:52:33,515 INFO    MainThread:9403 [wandb_init.py:init():872] starting backend
+2025-06-13 17:52:33,515 INFO    MainThread:9403 [wandb_init.py:init():875] sending inform_init request
+2025-06-13 17:52:33,525 INFO    MainThread:9403 [wandb_init.py:init():883] backend started and connected
+2025-06-13 17:52:33,662 INFO    MainThread:9403 [wandb_run.py:_label_probe_notebook():1299] probe notebook
+2025-06-13 17:52:33,663 INFO    MainThread:9403 [wandb_run.py:_label_probe_notebook():1309] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2025-06-13 17:52:33,663 INFO    MainThread:9403 [wandb_init.py:init():956] updated telemetry
+2025-06-13 17:52:33,934 INFO    MainThread:9403 [wandb_init.py:init():980] communicating run to backend with 90.0 second timeout
+2025-06-13 17:52:34,120 INFO    MainThread:9403 [wandb_init.py:init():1032] starting run threads in backend
+2025-06-13 17:52:34,527 INFO    MainThread:9403 [wandb_run.py:_console_start():2453] atexit reg
+2025-06-13 17:52:34,527 INFO    MainThread:9403 [wandb_run.py:_redirect():2301] redirect: wrap_raw
+2025-06-13 17:52:34,527 INFO    MainThread:9403 [wandb_run.py:_redirect():2370] Wrapping output streams.
+2025-06-13 17:52:34,527 INFO    MainThread:9403 [wandb_run.py:_redirect():2393] Redirects installed.
+2025-06-13 17:52:34,531 INFO    MainThread:9403 [wandb_init.py:init():1078] run started, returning control to user process
+2025-06-13 17:57:26,980 INFO    MainThread:9403 [wandb_run.py:_finish():2219] finishing run joeldvd/SemFew_recreate/lqf7zjhl
+2025-06-13 17:57:26,982 INFO    MainThread:9403 [wandb_run.py:_atexit_cleanup():2418] got exitcode: 0
+2025-06-13 17:57:26,983 INFO    MainThread:9403 [wandb_run.py:_restore():2400] restore
+2025-06-13 17:57:26,985 INFO    MainThread:9403 [wandb_run.py:_restore():2406] restore done
+2025-06-13 17:57:30,845 INFO    MainThread:9403 [wandb_run.py:_footer_history_summary_info():4000] rendering history
+2025-06-13 17:57:30,846 INFO    MainThread:9403 [wandb_run.py:_footer_history_summary_info():4032] rendering summary
+2025-06-13 17:57:30,847 INFO    MainThread:9403 [wandb_run.py:_footer_sync_info():3961] logging synced files

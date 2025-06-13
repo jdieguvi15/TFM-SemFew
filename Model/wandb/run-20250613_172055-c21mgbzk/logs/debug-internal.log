@@ -5,3 +5,7 @@
 {"time":"2025-06-13T17:21:01.942064+02:00","level":"INFO","msg":"sender: started","stream_id":"c21mgbzk"}
 {"time":"2025-06-13T17:21:01.942003+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"c21mgbzk"}
 {"time":"2025-06-13T17:21:02.393301+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-13T17:25:14.676133+02:00","level":"INFO","msg":"stream: closing","id":"c21mgbzk"}
+{"time":"2025-06-13T17:25:14.676279+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-13T17:25:14.678106+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-13T17:25:15.224065+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}

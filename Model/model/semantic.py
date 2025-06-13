@@ -254,7 +254,7 @@ def generate_semantics(args):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--llm', type=str, choices=["gemini", "default", "groq"], default="default")
-    parser.add_argument('--semantics_from', type=str, default="dafault", choices=["default", "images", "text", "file", "names", "wordnet"])
+    parser.add_argument('--semantics_from', type=str, default="default", choices=["default", "images", "text", "file", "names", "wordnet"])
     parser.add_argument('--file', type=str, default="None")
     parser.add_argument('--key', type=str)
     parser.add_argument('--images_per_class', type=int, default=5)

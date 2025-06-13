@@ -1,0 +1,29 @@
+{"time":"2025-06-13T17:57:30.880898+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/Users/jdieguez/Documents/master/TFM/code/TFM-SemFew/Model/wandb/run-20250613_175726-xftinzoa/logs/debug-core.log"}
+{"time":"2025-06-13T17:57:31.256068+02:00","level":"INFO","msg":"stream: created new stream","id":"xftinzoa"}
+{"time":"2025-06-13T17:57:31.256118+02:00","level":"INFO","msg":"stream: started","id":"xftinzoa"}
+{"time":"2025-06-13T17:57:31.256183+02:00","level":"INFO","msg":"handler: started","stream_id":"xftinzoa"}
+{"time":"2025-06-13T17:57:31.256155+02:00","level":"INFO","msg":"sender: started","stream_id":"xftinzoa"}
+{"time":"2025-06-13T17:57:31.256381+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"xftinzoa"}
+{"time":"2025-06-13T17:57:31.497393+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-13T18:50:20.654605+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-06-13T18:55:56.068219+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-06-13T19:04:07.875866+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-06-13T19:05:50.897482+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/joeldvd/SemFew_recreate/xftinzoa/file_stream\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-06-13T19:05:52.969664+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/joeldvd/SemFew_recreate/xftinzoa/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-06-13T19:08:49.373182+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-06-13T19:09:26.169141+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/joeldvd/SemFew_recreate/xftinzoa/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-06-13T19:09:28.687993+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/joeldvd/SemFew_recreate/xftinzoa/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-06-13T19:09:33.683091+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/joeldvd/SemFew_recreate/xftinzoa/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-06-13T19:09:38.131657+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-06-13T19:13:29.844316+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/joeldvd/SemFew_recreate/xftinzoa/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-06-13T19:13:52.635476+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/joeldvd/SemFew_recreate/xftinzoa/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-06-13T19:17:04.067451+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-06-13T19:22:48.865533+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/joeldvd/SemFew_recreate/xftinzoa/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-06-13T19:33:22.058317+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-06-13T19:42:27.024077+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/joeldvd/SemFew_recreate/xftinzoa/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-06-13T19:43:29.85483+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-06-13T19:47:31.968121+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/joeldvd/SemFew_recreate/xftinzoa/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-06-13T20:00:25.6917+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-06-13T21:05:52.423404+02:00","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/files/joeldvd/SemFew_recreate/xftinzoa/file_stream","body":"{\"error\":\"context deadline exceeded\"}"}
+{"time":"2025-06-13T21:14:32.397466+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/joeldvd/SemFew_recreate/xftinzoa/file_stream\": read tcp 192.168.1.146:58430->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-06-13T21:55:40.512656+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 192.168.1.146:58874->35.186.228.49:443: read: connection reset by peer"}

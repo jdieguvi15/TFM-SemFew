@@ -23,3 +23,4 @@ config: {'dataset': 'FC100', 'backbone': 'resnet', 'center': 'mean', 'gpu': 0, '
 2025-06-13 17:21:02,561 INFO    MainThread:98428 [wandb_run.py:_redirect():2393] Redirects installed.
 2025-06-13 17:21:02,565 INFO    MainThread:98428 [wandb_init.py:init():1078] run started, returning control to user process
 2025-06-13 17:21:03,029 INFO    MainThread:98428 [wandb_init.py:_post_run_cell_hook():592] [no run ID] resuming backend
+2025-06-13 17:25:14,669 INFO    MsgRouterThr:98428 [mailbox.py:close():129] [no run ID] Closing mailbox, abandoning 1 handles.

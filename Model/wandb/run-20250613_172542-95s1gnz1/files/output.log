@@ -1,0 +1,4 @@
+2025-06-13 17:25:43,515 - train.py[line:51] - INFO: {}
+Current working directory: /Users/jdieguez/Documents/master/TFM/code/TFM-SemFew/Model
+Current working directory: /Users/jdieguez/Documents/master/TFM/code/TFM-SemFew/Model
+[34m[1mwandb[0m: [33mWARNING[0m Calling wandb.login() after wandb.init() has no effect.
