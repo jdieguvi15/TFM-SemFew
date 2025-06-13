@@ -35,7 +35,7 @@ def test(args):
         args.test = '/path/to/your/miniimagent/test'
         test_dataset = ImageFolder(args.test, transform=transform_val if args.backbone == 'resnet' else transform_val_224)
     elif args.dataset == 'FC100':
-        args.test = '/path/to/your/fc100/test'
+        args.test = args.path_to_fc100 + '/test'
         test_dataset = ImageFolder(args.test, transform=transform_val_cifar if args.backbone == 'resnet' else transform_val_224_cifar)
     elif args.dataset == 'CIFAR-FS':
         args.test = args.path_to_cifarfs + 'test'
