@@ -60,8 +60,8 @@ def train(args):
         device = torch.device("cpu")
 
     if args.dataset == 'MiniImageNet':
-        args.val = '/path/to/your/miniimagenet/val'
-        args.train = '/path/to/your/miniimagenet/train'
+        args.val = args.path_to_miniimagent + '/val'
+        args.train = args.path_to_miniimagent + '/train'
         train_dataset = ImageFolder(args.train, transform=transform_train if args.backbone == 'resnet' else transform_train_224)
         val_dataset = ImageFolder(args.val, transform=transform_val if args.backbone == 'resnet' else transform_val_224)
 

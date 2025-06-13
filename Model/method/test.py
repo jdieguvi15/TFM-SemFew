@@ -32,7 +32,7 @@ def test(args):
         args.num_workers = 0
 
     if args.dataset == 'MiniImageNet':
-        args.test = '/path/to/your/miniimagent/test'
+        args.test = args.path_to_miniimagent + '/test'
         test_dataset = ImageFolder(args.test, transform=transform_val if args.backbone == 'resnet' else transform_val_224)
     elif args.dataset == 'FC100':
         args.test = args.path_to_fc100 + '/test'
