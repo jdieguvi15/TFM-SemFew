@@ -81,7 +81,7 @@ def test(args):
     model.eval()
 
     Model_PATH = os.path.join(args.work_dir, 'epoch_best.pth')
-    H = torch.load(Model_PATH, map_location=device)
+    H = torch.load(Model_PATH, map_location=device, weights_only=False)
     fusion = H['G']
     best_epoch = H['epoch']
     best_acc = H['acc']
