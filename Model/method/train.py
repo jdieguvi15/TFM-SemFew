@@ -101,9 +101,9 @@ def train(args):
                             num_workers=args.num_workers, pin_memory=True)
     
     if args.backbone == 'resnet':
-        proto_center = torch.load('center_{}_{}.pth'.format(args.dataset, args.backbone), map_location=device, weights_only=True)[args.center]
+        proto_center = torch.load('center_{}_{}.pth'.format(args.dataset, args.backbone), map_location=device, weights_only=False)[args.center]
     elif args.backbone == 'swin':
-        proto_center = torch.load('center_{}_{}.pth'.format(args.dataset, args.backbone), map_location=device, weights_only=True)[args.center]
+        proto_center = torch.load('center_{}_{}.pth'.format(args.dataset, args.backbone), map_location=device, weights_only=False)[args.center]
      
     if args.backbone == 'resnet':
         model = Res12(avg_pool=True, drop_block='ImageNet' in args.dataset).to(device)
