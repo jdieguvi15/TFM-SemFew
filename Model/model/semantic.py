@@ -239,9 +239,9 @@ def generate_semantics(args):
     print(json_path)
     
     # Already calculated
-    if os.path.exists(json_path):
-        with open(json_path, "r") as f:
-            return json.load(f)
+    #if os.path.exists(json_path):
+    #    with open(json_path, "r") as f:
+    #        return json.load(f)
 
     class_descriptions = generate_descriptions(args)
     return encode_descriptions(args, class_descriptions)
