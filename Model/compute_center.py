@@ -44,7 +44,7 @@ def main(args):
     
     # train
     if args.dataset == 'MiniImageNet':
-        trainset = ImageFolder('/Users/jdieguez/Documents/master/TFM/code/mini-imagenet-sxc/train', transform=transform_val if args.backbone == 'resnet' else transform_val_224)
+        trainset = ImageFolder(args.path_to_miniimagenet + '/train', transform=transform_val if args.backbone == 'resnet' else transform_val_224)
     elif args.dataset == 'FC100':
         trainset = ImageFolder(args.path_to_fc100 + '/train', transform=transform_val_cifar if args.backbone == 'resnet' else transform_val_224_cifar)
     elif args.dataset == 'CIFAR-FS':
