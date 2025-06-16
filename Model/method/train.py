@@ -1,5 +1,6 @@
 import os
 import sys
+import json
 import wandb
 
 
@@ -134,6 +135,10 @@ def train(args):
     if args.semantics_from == 'default':
         if 'ImageNet' in args.dataset:
             semantic = torch.load('./semantic/imagenet_semantic_{}_{}.pth'.format(args.mode, args.text_type), map_location=device)['semantic_feature']
+            # mapping from https://github.com/raghakot/keras-vis/blob/master/resources/imagenet_class_index.json
+            with open("../imgnet_mapping.json", 'r') as f:
+                imap = json.load(f)
+            semantic = {imap[cls]: semantic[cls] for cls in semantic.keys()}
         else:
             semantic = torch.load('./semantic/cifar100_semantic_{}_{}.pth'.format(args.mode, args.text_type), map_location=device)['semantic_feature']
         semantic = {k: v.float() for k, v in semantic.items()}
