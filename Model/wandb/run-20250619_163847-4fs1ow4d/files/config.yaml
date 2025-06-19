@@ -1,0 +1,104 @@
+_wandb:
+    value:
+        cli_version: 0.20.1
+        m: []
+        python_version: 3.9.21
+        t:
+            "1":
+                - 1
+                - 5
+                - 11
+                - 41
+                - 49
+                - 53
+                - 63
+                - 71
+                - 95
+            "2":
+                - 1
+                - 5
+                - 11
+                - 41
+                - 49
+                - 53
+                - 63
+                - 71
+                - 95
+            "3":
+                - 2
+                - 13
+                - 16
+                - 55
+            "4": 3.9.21
+            "5": 0.20.1
+            "6": 4.51.1
+            "8":
+                - 1
+            "12": 0.20.1
+            "13": darwin-x86_64
+backbone:
+    value: clip
+batch_size:
+    value: 128
+center:
+    value: mean
+dataset:
+    value: MiniImageNet
+drop:
+    value: 0
+feat_size:
+    value: 640
+file:
+    value: None
+gpu:
+    value: 0
+images_per_class:
+    value: 5
+key:
+    value: None
+llm:
+    value: default
+lr:
+    value: 0.0001
+max_epoch:
+    value: 1
+mode:
+    value: clip
+num_workers:
+    value: 8
+path_to_checkpoints:
+    value: /Users/jdieguez/Documents/master/TFM/code/checkpoints
+path_to_cifarfs:
+    value: /Users/jdieguez/Documents/master/TFM/code/cifar-fs/
+path_to_fc100:
+    value: /Users/jdieguez/Documents/master/TFM/code/FC100/
+path_to_miniimagenet:
+    value: /Users/jdieguez/Documents/master/TFM/code/miniimagenet
+path_to_tieredimagenet:
+    value: /path/to/your/tiredimagenet
+project:
+    value: SemFew_recreate
+query:
+    value: 15
+run_name:
+    value: Miniimagenet_testing
+seed:
+    value: 13
+semantic_size:
+    value: 512
+semantics_from:
+    value: default
+shot:
+    value: 1
+step_size:
+    value: 30
+test-batch:
+    value: 600
+test_batch:
+    value: 600
+test_way:
+    value: 5
+text_type:
+    value: gpt
+verbose:
+    value: false

@@ -13,6 +13,8 @@ import os.path
 
 import numpy as np
 import torch
+import open_clip
+from PIL import Image
 import torch.nn.functional as F
 from torch.utils.data import DataLoader
 from torch.utils.tensorboard import SummaryWriter
@@ -60,23 +62,55 @@ def train(args):
     else:
         device = torch.device("cpu")
 
+    if args.backbone == 'resnet':
+        model = Res12(avg_pool=True, drop_block='ImageNet' in args.dataset).to(device)
+        model_dict = model.state_dict()
+        checkpoint = torch.load(args.model_path, map_location=device)['params']
+        checkpoint = {k[8:]: v for k, v in checkpoint.items()}
+        checkpoint = {k: v for k, v in checkpoint.items() if k in model_dict}
+
+        print(len(checkpoint))
+        model.load_state_dict(checkpoint)
+        model.eval()
+
+        feat_size = 640
+
+    elif args.backbone == 'swin':
+        model = swin_tiny().to(device)
+        model_dict = model.state_dict()
+        checkpoint = torch.load(args.model_path, map_location=device)['params']
+        checkpoint = {k: v for k, v in checkpoint.items() if k in model_dict}
+
+        print(len(checkpoint))
+        model.load_state_dict(checkpoint)
+        model.eval()
+
+        feat_size = 768
+
+    elif args.backbone == 'clip':
+        model, _, preprocess = open_clip.create_model_and_transforms('ViT-B-32', pretrained='laion2b_s34b_b79k')
+        tokenizer = open_clip.get_tokenizer('ViT-B-32')
+        model = model.to(device).eval()
+
+        feat_size = 512
+
     if args.dataset == 'MiniImageNet':
         args.val = args.path_to_miniimagenet + '/val'
         args.train = args.path_to_miniimagenet + '/train'
-        train_dataset = ImageFolder(args.train, transform=transform_train if args.backbone == 'resnet' else transform_train_224)
-        val_dataset = ImageFolder(args.val, transform=transform_val if args.backbone == 'resnet' else transform_val_224)
+        train_dataset = ImageFolder(args.train, transform=transform_train if args.backbone == 'resnet' else transform_train_224 if args.backbone == 'swin' else preprocess)
+        val_dataset = ImageFolder(args.val, transform=transform_val if args.backbone == 'resnet' else transform_val_224 if args.backbone == 'swin' else preprocess)
 
     elif args.dataset == 'FC100':
         args.val = args.path_to_fc100 + '/val'
         args.train = args.path_to_fc100 + '/train'
-        train_dataset = ImageFolder(args.train, transform=transform_train_cifar if args.backbone == 'resnet' else transform_train_224_cifar)
-        val_dataset = ImageFolder(args.val, transform=transform_val_cifar if args.backbone == 'resnet' else transform_val_224_cifar)
+        train_dataset = ImageFolder(args.train, transform=transform_train_cifar if args.backbone == 'resnet' else transform_train_224_cifar if args.backbone == 'swin' else preprocess)
+        val_dataset = ImageFolder(args.val, transform=transform_val_cifar if args.backbone == 'resnet' else transform_val_224_cifar if args.backbone == 'swin' else preprocess)
 
     elif args.dataset == 'CIFAR-FS':
         args.val = args.path_to_cifarfs + '/val'
         args.train = args.path_to_cifarfs + 'train'
-        train_dataset = ImageFolder(args.train, transform=transform_train_cifar if args.backbone == 'resnet' else transform_train_224_cifar)
-        val_dataset = ImageFolder(args.val, transform=transform_val_cifar if args.backbone == 'resnet' else transform_train_224_cifar)
+        train_dataset = ImageFolder(args.train, transform=transform_train_cifar if args.backbone == 'resnet' else transform_train_224_cifar if args.backbone == 'swin' else preprocess)
+        val_dataset = ImageFolder(args.val, transform=transform_val_cifar if args.backbone == 'resnet' else transform_train_224_cifar if args.backbone == 'swin' else preprocess)
 
     elif args.dataset == 'TieredImageNet':
         train_dataset = tieredImageNet(setname='train', augment=True)
@@ -101,32 +135,7 @@ def train(args):
     val_loader = DataLoader(dataset=val_dataset, batch_sampler=val_sampler,
                             num_workers=args.num_workers, pin_memory=True)
     
-    if args.backbone == 'resnet':
-        proto_center = torch.load('center_{}_{}.pth'.format(args.dataset, args.backbone), map_location=device, weights_only=False)[args.center]
-    elif args.backbone == 'swin':
-        proto_center = torch.load('center_{}_{}.pth'.format(args.dataset, args.backbone), map_location=device, weights_only=False)[args.center]
-     
-    if args.backbone == 'resnet':
-        model = Res12(avg_pool=True, drop_block='ImageNet' in args.dataset).to(device)
-        model_dict = model.state_dict()
-        checkpoint = torch.load(args.model_path, map_location=device)['params']
-        checkpoint = {k[8:]: v for k, v in checkpoint.items()}
-        checkpoint = {k: v for k, v in checkpoint.items() if k in model_dict}
-
-    elif args.backbone == 'swin':
-        model = swin_tiny().to(device)
-        model_dict = model.state_dict()
-        checkpoint = torch.load(args.model_path, map_location=device)['params']
-        checkpoint = {k: v for k, v in checkpoint.items() if k in model_dict}
-
-    print(len(checkpoint))
-    model.load_state_dict(checkpoint)
-    model.eval()
-    
-    if args.backbone == 'resnet':
-        feat_size = 640
-    elif args.backbone == 'swin':
-        feat_size = 768
+    proto_center = torch.load('center_{}_{}.pth'.format(args.dataset, args.backbone), map_location=device, weights_only=False)[args.center]
         
     H = SemAlign(feat_size, args.semantic_size, h_size=4096, drop=args.drop).to(device)
     optimizer = torch.optim.Adam(H.parameters(), lr=args.lr)
@@ -152,7 +161,10 @@ def train(args):
             proto = torch.tensor(np.array([proto_center[idx_to_class[l.item()]] for l in labels])).to(device)
             text_feature = torch.stack([semantic[idx_to_class[l.item()]] for l in labels]).to(device)
             with torch.no_grad():
-                img_feature = model(data.to(device))
+                if args.backbone == 'clip':
+                    img_feature = model.encode_image(data.to(device))
+                else:
+                    img_feature = model(data.to(device))
 
             optimizer.zero_grad()
             H.zero_grad()
@@ -182,7 +194,11 @@ def train(args):
             with torch.no_grad():
                 for data, labels in tqdm(val_loader):
                     data = data.to(device)
-                    data = model(data).view(data.size(0), -1)
+                    if args.backbone == 'clip':
+                        data = model.encode_image(data)
+                    else:
+                        data = model(data)
+                    data = data.view(data.size(0), -1)
                     n_support = args.shot * args.test_way
                     support, query = data[:n_support], data[n_support:]
 

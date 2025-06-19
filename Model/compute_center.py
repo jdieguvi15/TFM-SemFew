@@ -12,6 +12,8 @@ from model.swin_transformer import swin_tiny
 import torch.utils.data
 from utils import transform_val, transform_val_cifar, cluster
 from utils import transform_val_224_cifar, transform_val_224
+import open_clip
+from PIL import Image
 
 def main(args):
     if torch.cuda.is_available():
@@ -28,15 +30,24 @@ def main(args):
         checkpoint = {k[8:]: v for k, v in checkpoint.items()}
         checkpoint = {k: v for k, v in checkpoint.items() if k in model_dict}
 
+        print(len(checkpoint))
+        model.load_state_dict(checkpoint)
+        model.eval()
+
     elif args.backbone == 'swin':
         model = swin_tiny().to(device)
         model_dict = model.state_dict()
         checkpoint = torch.load(args.model_path, map_location=device)['params']
         checkpoint = {k: v for k, v in checkpoint.items() if k in model_dict}
 
-    print(len(checkpoint))
-    model.load_state_dict(checkpoint)
-    model.eval()
+        print(len(checkpoint))
+        model.load_state_dict(checkpoint)
+        model.eval()
+
+    elif args.backbone == 'clip':
+        model, _, preprocess = open_clip.create_model_and_transforms('ViT-B-32', pretrained='laion2b_s34b_b79k')
+        tokenizer = open_clip.get_tokenizer('ViT-B-32')
+        model = model.to(device).eval()
 
     data = {}
     batch_size = 128
@@ -44,11 +55,11 @@ def main(args):
     
     # train
     if args.dataset == 'MiniImageNet':
-        trainset = ImageFolder(args.path_to_miniimagenet + '/train', transform=transform_val if args.backbone == 'resnet' else transform_val_224)
+        trainset = ImageFolder(args.path_to_miniimagenet + '/train', transform=transform_val if args.backbone == 'resnet' else transform_val_224 if args.backbone == 'swin' else preprocess)
     elif args.dataset == 'FC100':
-        trainset = ImageFolder(args.path_to_fc100 + '/train', transform=transform_val_cifar if args.backbone == 'resnet' else transform_val_224_cifar)
+        trainset = ImageFolder(args.path_to_fc100 + '/train', transform=transform_val_cifar if args.backbone == 'resnet' else transform_val_224_cifar if args.backbone == 'swin' else preprocess)
     elif args.dataset == 'CIFAR-FS':
-        trainset = ImageFolder(args.path_to_cifarfs + '/train', transform=transform_val_cifar if args.backbone == 'resnet' else transform_val_224_cifar)
+        trainset = ImageFolder(args.path_to_cifarfs + '/train', transform=transform_val_cifar if args.backbone == 'resnet' else transform_val_224_cifar if args.backbone == 'swin' else preprocess)
     elif args.dataset == 'TieredImageNet':
         trainset = tieredImageNet(setname='train', augment=False)
 
@@ -64,7 +75,10 @@ def main(args):
     for x, labels in tqdm(train_loader):
         labels = [idx_to_class[l.item()] for l in labels]
         with torch.no_grad():
-            x = model(x.to(device))
+            if args.backbone == 'clip':
+                x = model.encode_image(x.to(device))
+            else:
+                x = model(x.to(device))
         for i, l in enumerate(labels):
             if l in data:
                 data[l].append(x[i].detach().cpu().numpy())
@@ -113,4 +127,6 @@ if __name__ == '__main__':
         args.model_path = f"{args.path_to_checkpoints}/ResNet-{args.dataset}.pth"
     elif args.backbone == 'swin':
         args.model_path = f"{args.path_to_checkpoints}/Swin-Tiny-{args.dataset}.pth"
+    elif args.backbone == 'clip':
+        args.model_path = f"{args.path_to_checkpoints}/Clip-{args.dataset}.pth"
     main(args)

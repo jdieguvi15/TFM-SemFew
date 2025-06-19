@@ -1,0 +1,33 @@
+2025-06-16 23:40:17,505 - test.py[line:29] - INFO: {}
+2025-06-16 23:40:17,935 - test.py[line:90] - INFO: best epoch: 0 72.493335
+2025-06-16 23:40:17,936 - test.py[line:91] - INFO: best k: 0.000000
+2025-06-16 23:47:01,835 - test.py[line:135] - INFO: max |k:              0.0 |mix acc: 66.65+0.75% |gap: 6.22
+2025-06-16 23:47:01,841 - test.py[line:137] - INFO: ACC:|proto acc: 60.43+0.81% |gen acc: 66.65+0.75%
+2025-06-19 16:15:15,102 - train.py[line:52] - INFO: {}
+2025-06-19 17:02:50,400 - test.py[line:30] - INFO: {}
+2025-06-19 17:02:50,403 - factory.py[line:312] - INFO: Loaded ViT-B-32 model config.
+2025-06-19 17:02:52,292 - factory.py[line:399] - INFO: Loading pretrained ViT-B-32 weights (laion2b_s34b_b79k).
+2025-06-19 17:02:53,974 - test.py[line:101] - INFO: best epoch: 0 92.604447
+2025-06-19 17:02:53,977 - test.py[line:102] - INFO: best k: 0.230000
+2025-06-19 17:06:21,841 - test.py[line:30] - INFO: {}
+2025-06-19 17:06:21,844 - factory.py[line:312] - INFO: Loaded ViT-B-32 model config.
+2025-06-19 17:06:23,599 - factory.py[line:399] - INFO: Loading pretrained ViT-B-32 weights (laion2b_s34b_b79k).
+2025-06-19 17:06:25,228 - test.py[line:101] - INFO: best epoch: 0 92.604447
+2025-06-19 17:06:25,230 - test.py[line:102] - INFO: best k: 0.230000
+2025-06-19 17:17:27,651 - test.py[line:150] - INFO: max |k:             0.23 |mix acc: 91.57+0.51% |gap: 3.67
+2025-06-19 17:17:27,655 - test.py[line:152] - INFO: ACC:|proto acc: 87.90+0.66% |gen acc: 89.30+0.56%
+2025-06-19 17:26:43,210 - train.py[line:54] - INFO: {}
+2025-06-19 17:32:01,870 - train.py[line:179] - INFO: [Epoch 0/1] [recon loss: 0.083756] 
+2025-06-19 17:39:03,063 - train.py[line:247] - INFO: best epoch: 0
+2025-06-19 17:39:03,082 - train.py[line:252] - INFO: epoch: 0 |origin acc: 65.55+0.88% |complete acc: 72.79+0.79% |gap: 7.24/7.24 |k: 0.0
+2025-06-19 17:39:03,083 - train.py[line:256] - INFO: ACC |proto acc: 65.55+0.88% |gen acc: 72.79+0.79% |Max: 72.79
+2025-06-19 17:39:04,149 - test.py[line:30] - INFO: {}
+2025-06-19 17:39:04,149 - test.py[line:30] - INFO: {}
+2025-06-19 17:39:06,969 - test.py[line:101] - INFO: best epoch: 0 72.788890
+2025-06-19 17:39:06,969 - test.py[line:101] - INFO: best epoch: 0 72.788890
+2025-06-19 17:39:06,972 - test.py[line:102] - INFO: best k: 0.000000
+2025-06-19 17:39:06,972 - test.py[line:102] - INFO: best k: 0.000000
+2025-06-19 18:00:08,447 - test.py[line:150] - INFO: max |k:              0.0 |mix acc: 66.71+0.76% |gap: 6.28
+2025-06-19 18:00:08,447 - test.py[line:150] - INFO: max |k:              0.0 |mix acc: 66.71+0.76% |gap: 6.28
+2025-06-19 18:00:08,455 - test.py[line:152] - INFO: ACC:|proto acc: 60.43+0.81% |gen acc: 66.71+0.76%
+2025-06-19 18:00:08,455 - test.py[line:152] - INFO: ACC:|proto acc: 60.43+0.81% |gen acc: 66.71+0.76%

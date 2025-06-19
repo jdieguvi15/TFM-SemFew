@@ -12,6 +12,7 @@ import argparse
 
 import numpy as np
 import torch
+import open_clip
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 
@@ -29,18 +30,52 @@ def test(args):
     log.info(vars(args))
     set_seed(args.seed)
 
+    if torch.cuda.is_available():
+        device = torch.device("cuda")
+    elif torch.backends.mps.is_available():
+        device = torch.device("mps")
+    else:
+        device = torch.device("cpu")
+
+    if args.backbone == 'resnet':
+        model = Res12(avg_pool=True, drop_block='ImageNet' in args.dataset).to(device)
+        model_dict = model.state_dict()
+        checkpoint = torch.load(args.model_path, map_location=device)['params']
+        checkpoint = {k[8:]: v for k, v in checkpoint.items()}
+        checkpoint = {k: v for k, v in checkpoint.items() if k in model_dict}
+
+        print(len(checkpoint))
+        model.load_state_dict(checkpoint)
+        model.eval()
+
+    elif args.backbone == 'swin':
+        model = swin_tiny().to(device)
+        model_dict = model.state_dict()
+        checkpoint = torch.load(args.model_path, map_location=device)['params']
+        checkpoint = {k: v for k, v in checkpoint.items() if k in model_dict}
+
+        print(len(checkpoint))
+        model.load_state_dict(checkpoint)
+        model.eval()
+
+    elif args.backbone == 'clip':
+        model, _, preprocess = open_clip.create_model_and_transforms('ViT-B-32', pretrained='laion2b_s34b_b79k')
+        tokenizer = open_clip.get_tokenizer('ViT-B-32')
+        model = model.to(device).eval()
+
+
     if args.dataset == 'TieredImageNet':
         args.num_workers = 0
 
     if args.dataset == 'MiniImageNet':
         args.test = args.path_to_miniimagenet + '/test'
-        test_dataset = ImageFolder(args.test, transform=transform_val if args.backbone == 'resnet' else transform_val_224)
+        test_dataset = ImageFolder(args.test, transform=transform_val if args.backbone == 'resnet' else transform_val_224 if args.backbone == 'swin' else preprocess)
     elif args.dataset == 'FC100':
         args.test = args.path_to_fc100 + '/test'
-        test_dataset = ImageFolder(args.test, transform=transform_val_cifar if args.backbone == 'resnet' else transform_val_224_cifar)
+        test_dataset = ImageFolder(args.test, transform=transform_val_cifar if args.backbone == 'resnet' else transform_val_224_cifar if args.backbone == 'swin' else preprocess)
     elif args.dataset == 'CIFAR-FS':
         args.test = args.path_to_cifarfs + 'test'
-        test_dataset = ImageFolder(args.test, transform=transform_val_cifar if args.backbone == 'resnet' else transform_val_224_cifar)
+        test_dataset = ImageFolder(args.test, transform=transform_val_cifar if args.backbone == 'resnet' else transform_val_224_cifar if args.backbone == 'swin' else preprocess)
     elif args.dataset == 'TieredImageNet':
         test_dataset = tieredImageNet(setname='test')
 
@@ -56,30 +91,6 @@ def test(args):
     val_sampler = CategoriesSampler(test_dataset.targets, args.test_batch, args.test_way, args.shot + args.query)
     val_loader = DataLoader(dataset=test_dataset, batch_sampler=val_sampler, num_workers=args.num_workers,
                             pin_memory=True)
-
-    if torch.cuda.is_available():
-        device = torch.device("cuda")
-    elif torch.backends.mps.is_available():
-        device = torch.device("mps")
-    else:
-        device = torch.device("cpu")
-
-    if args.backbone == 'resnet':
-        model = Res12(avg_pool=True, drop_block='ImageNet' in args.dataset).to(device)
-        model_dict = model.state_dict()
-        checkpoint = torch.load(args.model_path, map_location=device)['params']
-        checkpoint = {k[8:]: v for k, v in checkpoint.items()}
-        checkpoint = {k: v for k, v in checkpoint.items() if k in model_dict}
-
-    elif args.backbone == 'swin':
-        model = swin_tiny().to(device)
-        model_dict = model.state_dict()
-        checkpoint = torch.load(args.model_path, map_location=device)['params']
-        checkpoint = {k: v for k, v in checkpoint.items() if k in model_dict}
-        
-    print(len(checkpoint))
-    model.load_state_dict(checkpoint)
-    model.eval()
 
     Model_PATH = os.path.join(args.work_dir, 'epoch_best.pth')
     H = torch.load(Model_PATH, map_location=device, weights_only=False)
@@ -112,7 +123,11 @@ def test(args):
         G_acc = []
         for data, labels in tqdm(val_loader):
             data = data.to(device)
-            data = model(data).view(data.size(0), -1)
+            if args.backbone == 'clip':
+                data = model.encode_image(data)
+            else:
+                data = model(data)
+            data = data.view(data.size(0), -1)
             n_support = args.shot * args.test_way
             support, query = data[:n_support], data[n_support:]
 
@@ -164,5 +179,7 @@ if __name__ == '__main__':
         args.model_path = f"{args.path_to_checkpoints}/ResNet-{args.dataset}.pth"
     elif args.backbone == 'swin':
         args.model_path = f"{args.path_to_checkpoints}/Swin-Tiny-{args.dataset}.pth"
+    elif args.backbone == 'clip':
+        args.model_path = f"{args.path_to_checkpoints}/Clip-{args.dataset}.pth"
         
     test(args)

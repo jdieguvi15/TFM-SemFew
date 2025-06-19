@@ -1,0 +1,7 @@
+{"time":"2025-06-19T16:15:13.017976+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/Users/jdieguez/Documents/master/TFM/code/TFM-SemFew/Model/wandb/run-20250619_161512-2i96juyw/logs/debug-core.log"}
+{"time":"2025-06-19T16:15:14.546873+02:00","level":"INFO","msg":"stream: created new stream","id":"2i96juyw"}
+{"time":"2025-06-19T16:15:14.546937+02:00","level":"INFO","msg":"handler: started","stream_id":"2i96juyw"}
+{"time":"2025-06-19T16:15:14.547094+02:00","level":"INFO","msg":"sender: started","stream_id":"2i96juyw"}
+{"time":"2025-06-19T16:15:14.547323+02:00","level":"INFO","msg":"stream: started","id":"2i96juyw"}
+{"time":"2025-06-19T16:15:14.547056+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"2i96juyw"}
+{"time":"2025-06-19T16:15:14.824058+02:00","level":"INFO","msg":"Starting system monitor"}
