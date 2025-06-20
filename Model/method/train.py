@@ -297,5 +297,7 @@ if __name__ == '__main__':
         args.model_path = f"{args.path_to_checkpoints}/ResNet-{args.dataset}.pth"
     elif args.backbone == 'swin':
         args.model_path = f"{args.path_to_checkpoints}/Swin-Tiny-{args.dataset}.pth"
+    elif args.backbone == 'clip':
+        args.model_path = f"{args.path_to_checkpoints}/Clip-{args.dataset}.pth"
     
     train(args)
