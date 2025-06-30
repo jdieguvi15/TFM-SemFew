@@ -24,7 +24,7 @@ from model.swin_transformer import swin_tiny
 from utils import set_seed, Cosine_classifier, count_95acc, count_kacc, transform_val_cifar, transform_val, transform_val_224, transform_val_224_cifar
 
 def test(args):
-    args.work_dir = '{}_{}_{}_{}_{}_{}_{}'.format(args.backbone, args.dataset, args.mode, args.text_type, args.center, args.shot, args.llm)
+    args.work_dir = '{}_{}_{}_{}_{}_{}_{}_{}'.format(args.backbone, args.dataset, args.mode, args.text_type, args.center, args.shot, args.llm, args.semantics_from)
 
     log = loggers('test_{}'.format(args.dataset))
     log.info(vars(args))

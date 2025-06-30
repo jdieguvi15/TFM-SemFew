@@ -1,0 +1,702 @@
+{
+  "train": [
+    "streetcar",
+    "bus",
+    "tractor",
+    "house",
+    "tank"
+  ],
+  "skyscraper": [
+    "house",
+    "plain",
+    "mountain",
+    "castle",
+    "road"
+  ],
+  "turtle": [
+    "lizard",
+    "seal",
+    "crocodile",
+    "snake",
+    "whale"
+  ],
+  "raccoon": [
+    "possum",
+    "skunk",
+    "squirrel",
+    "wolf",
+    "fox"
+  ],
+  "spider": [
+    "butterfly",
+    "cockroach",
+    "beetle",
+    "snake",
+    "bee"
+  ],
+  "orange": [
+    "apple",
+    "pear",
+    "sweet_pepper",
+    "oak_tree",
+    "hamster"
+  ],
+  "castle": [
+    "skyscraper",
+    "house",
+    "mountain",
+    "plain",
+    "road"
+  ],
+  "keyboard": [
+    "telephone",
+    "television",
+    "train",
+    "tank",
+    "couch"
+  ],
+  "clock": [
+    "television",
+    "telephone",
+    "man",
+    "keyboard",
+    "plate"
+  ],
+  "pear": [
+    "apple",
+    "hamster",
+    "cup",
+    "plate",
+    "baby"
+  ],
+  "girl": [
+    "woman",
+    "man",
+    "baby",
+    "hamster",
+    "bear"
+  ],
+  "seal": [
+    "whale",
+    "otter",
+    "bear",
+    "dolphin",
+    "hamster"
+  ],
+  "elephant": [
+    "bear",
+    "cattle",
+    "camel",
+    "rabbit",
+    "hamster"
+  ],
+  "apple": [
+    "pear",
+    "orange",
+    "sweet_pepper",
+    "hamster",
+    "plate"
+  ],
+  "bus": [
+    "streetcar",
+    "train",
+    "tractor",
+    "pickup_truck",
+    "tank"
+  ],
+  "mushroom": [
+    "snail",
+    "hamster",
+    "bear",
+    "pear",
+    "beetle"
+  ],
+  "possum": [
+    "squirrel",
+    "hamster",
+    "shrew",
+    "mouse",
+    "skunk"
+  ],
+  "squirrel": [
+    "hamster",
+    "possum",
+    "bear",
+    "skunk",
+    "rabbit"
+  ],
+  "chair": [
+    "couch",
+    "table",
+    "cup",
+    "bus",
+    "tractor"
+  ],
+  "tank": [
+    "tractor",
+    "train",
+    "rocket",
+    "motorcycle",
+    "bear"
+  ],
+  "plate": [
+    "cup",
+    "bowl",
+    "hamster",
+    "table",
+    "pear"
+  ],
+  "wolf": [
+    "fox",
+    "bear",
+    "skunk",
+    "rabbit",
+    "squirrel"
+  ],
+  "road": [
+    "plain",
+    "mountain",
+    "house",
+    "train",
+    "skyscraper"
+  ],
+  "mouse": [
+    "shrew",
+    "hamster",
+    "possum",
+    "rabbit",
+    "squirrel"
+  ],
+  "boy": [
+    "man",
+    "girl",
+    "baby",
+    "woman",
+    "bear"
+  ],
+  "shrew": [
+    "hamster",
+    "bear",
+    "mouse",
+    "possum",
+    "squirrel"
+  ],
+  "couch": [
+    "chair",
+    "table",
+    "house",
+    "bed",
+    "hamster"
+  ],
+  "sunflower": [
+    "rose",
+    "tulip",
+    "poppy",
+    "orchid",
+    "bee"
+  ],
+  "tiger": [
+    "leopard",
+    "bear",
+    "lion",
+    "fox",
+    "snake"
+  ],
+  "caterpillar": [
+    "worm",
+    "bee",
+    "butterfly",
+    "beetle",
+    "snake"
+  ],
+  "lion": [
+    "bear",
+    "camel",
+    "tiger",
+    "leopard",
+    "fox"
+  ],
+  "streetcar": [
+    "bus",
+    "train",
+    "tractor",
+    "pickup_truck",
+    "tank"
+  ],
+  "lawn_mower": [
+    "tractor",
+    "motorcycle",
+    "tank",
+    "train",
+    "house"
+  ],
+  "tulip": [
+    "rose",
+    "poppy",
+    "orchid",
+    "palm_tree",
+    "sunflower"
+  ],
+  "forest": [
+    "oak_tree",
+    "palm_tree",
+    "mountain",
+    "pine_tree",
+    "plain"
+  ],
+  "dolphin": [
+    "whale",
+    "shark",
+    "seal",
+    "turtle",
+    "ray"
+  ],
+  "cockroach": [
+    "beetle",
+    "lizard",
+    "lobster",
+    "snake",
+    "hamster"
+  ],
+  "bear": [
+    "hamster",
+    "rabbit",
+    "cattle",
+    "wolf",
+    "fox"
+  ],
+  "porcupine": [
+    "skunk",
+    "hamster",
+    "bear",
+    "squirrel",
+    "cockroach"
+  ],
+  "bee": [
+    "beetle",
+    "butterfly",
+    "caterpillar",
+    "cockroach",
+    "crab"
+  ],
+  "hamster": [
+    "squirrel",
+    "bear",
+    "rabbit",
+    "shrew",
+    "skunk"
+  ],
+  "lobster": [
+    "crab",
+    "cockroach",
+    "beetle",
+    "lizard",
+    "bear"
+  ],
+  "bowl": [
+    "cup",
+    "plate",
+    "pear",
+    "table",
+    "can"
+  ],
+  "can": [
+    "cup",
+    "bottle",
+    "plate",
+    "pear",
+    "bowl"
+  ],
+  "bottle": [
+    "cup",
+    "can",
+    "bowl",
+    "plate",
+    "pear"
+  ],
+  "trout": [
+    "flatfish",
+    "whale",
+    "shark",
+    "lizard",
+    "crocodile"
+  ],
+  "snake": [
+    "lizard",
+    "bear",
+    "hamster",
+    "worm",
+    "cockroach"
+  ],
+  "bridge": [
+    "road",
+    "train",
+    "castle",
+    "skyscraper",
+    "mountain"
+  ],
+  "pine_tree": [
+    "palm_tree",
+    "oak_tree",
+    "maple_tree",
+    "willow_tree",
+    "forest"
+  ],
+  "skunk": [
+    "hamster",
+    "squirrel",
+    "bear",
+    "fox",
+    "wolf"
+  ],
+  "lizard": [
+    "snake",
+    "dinosaur",
+    "cockroach",
+    "lobster",
+    "turtle"
+  ],
+  "cup": [
+    "bottle",
+    "can",
+    "bowl",
+    "plate",
+    "pear"
+  ],
+  "kangaroo": [
+    "fox",
+    "squirrel",
+    "rabbit",
+    "possum",
+    "bear"
+  ],
+  "oak_tree": [
+    "palm_tree",
+    "willow_tree",
+    "maple_tree",
+    "pine_tree",
+    "pear"
+  ],
+  "dinosaur": [
+    "lizard",
+    "bear",
+    "snake",
+    "cattle",
+    "cockroach"
+  ],
+  "rabbit": [
+    "bear",
+    "hamster",
+    "squirrel",
+    "fox",
+    "cattle"
+  ],
+  "orchid": [
+    "rose",
+    "tulip",
+    "palm_tree",
+    "poppy",
+    "butterfly"
+  ],
+  "willow_tree": [
+    "oak_tree",
+    "palm_tree",
+    "pine_tree",
+    "squirrel",
+    "plain"
+  ],
+  "ray": [
+    "flatfish",
+    "shark",
+    "whale",
+    "dolphin",
+    "crocodile"
+  ],
+  "palm_tree": [
+    "oak_tree",
+    "pine_tree",
+    "willow_tree",
+    "forest",
+    "plain"
+  ],
+  "mountain": [
+    "plain",
+    "road",
+    "bear",
+    "sea",
+    "snake"
+  ],
+  "house": [
+    "wardrobe",
+    "skyscraper",
+    "plain",
+    "train",
+    "road"
+  ],
+  "cloud": [
+    "mountain",
+    "sea",
+    "plain",
+    "rocket",
+    "bear"
+  ],
+  "baby": [
+    "hamster",
+    "girl",
+    "woman",
+    "bear",
+    "snake"
+  ],
+  "bed": [
+    "couch",
+    "wardrobe",
+    "table",
+    "television",
+    "house"
+  ],
+  "bicycle": [
+    "motorcycle",
+    "tractor",
+    "streetcar",
+    "lawn_mower",
+    "bus"
+  ],
+  "chimpanzee": [
+    "bear",
+    "cattle",
+    "hamster",
+    "elephant",
+    "wolf"
+  ],
+  "fox": [
+    "wolf",
+    "bear",
+    "squirrel",
+    "rabbit",
+    "skunk"
+  ],
+  "leopard": [
+    "tiger",
+    "bear",
+    "snake",
+    "hamster",
+    "squirrel"
+  ],
+  "man": [
+    "woman",
+    "girl",
+    "boy",
+    "bear",
+    "baby"
+  ],
+  "pickup_truck": [
+    "bus",
+    "tractor",
+    "streetcar",
+    "train",
+    "tank"
+  ],
+  "plain": [
+    "mountain",
+    "road",
+    "house",
+    "bear",
+    "hamster"
+  ],
+  "poppy": [
+    "rose",
+    "tulip",
+    "orchid",
+    "sunflower",
+    "sweet_pepper"
+  ],
+  "rocket": [
+    "tank",
+    "cup",
+    "hamster",
+    "whale",
+    "beetle"
+  ],
+  "rose": [
+    "tulip",
+    "poppy",
+    "orchid",
+    "pear",
+    "apple"
+  ],
+  "snail": [
+    "worm",
+    "snake",
+    "caterpillar",
+    "cockroach",
+    "turtle"
+  ],
+  "sweet_pepper": [
+    "pear",
+    "apple",
+    "beetle",
+    "bear",
+    "rabbit"
+  ],
+  "table": [
+    "couch",
+    "cup",
+    "plate",
+    "chair",
+    "wardrobe"
+  ],
+  "telephone": [
+    "television",
+    "keyboard",
+    "plate",
+    "cup",
+    "woman"
+  ],
+  "wardrobe": [
+    "house",
+    "couch",
+    "train",
+    "table",
+    "television"
+  ],
+  "whale": [
+    "dolphin",
+    "shark",
+    "seal",
+    "ray",
+    "otter"
+  ],
+  "woman": [
+    "girl",
+    "man",
+    "baby",
+    "hamster",
+    "bear"
+  ],
+  "worm": [
+    "caterpillar",
+    "snake",
+    "cockroach",
+    "snail",
+    "lizard"
+  ],
+  "otter": [
+    "beaver",
+    "seal",
+    "bear",
+    "whale",
+    "squirrel"
+  ],
+  "motorcycle": [
+    "bicycle",
+    "tractor",
+    "lawn_mower",
+    "tank",
+    "rocket"
+  ],
+  "television": [
+    "telephone",
+    "couch",
+    "plate",
+    "house",
+    "wardrobe"
+  ],
+  "lamp": [
+    "cup",
+    "table",
+    "television",
+    "bottle",
+    "plate"
+  ],
+  "crocodile": [
+    "snake",
+    "lizard",
+    "dinosaur",
+    "turtle",
+    "lobster"
+  ],
+  "shark": [
+    "whale",
+    "dolphin",
+    "ray",
+    "seal",
+    "flatfish"
+  ],
+  "butterfly": [
+    "beetle",
+    "bee",
+    "cockroach",
+    "caterpillar",
+    "lizard"
+  ],
+  "beaver": [
+    "otter",
+    "bear",
+    "seal",
+    "crocodile",
+    "squirrel"
+  ],
+  "beetle": [
+    "cockroach",
+    "butterfly",
+    "bee",
+    "lobster",
+    "crab"
+  ],
+  "tractor": [
+    "tank",
+    "motorcycle",
+    "bicycle",
+    "train",
+    "lawn_mower"
+  ],
+  "flatfish": [
+    "ray",
+    "whale",
+    "shark",
+    "turtle",
+    "trout"
+  ],
+  "maple_tree": [
+    "oak_tree",
+    "pine_tree",
+    "palm_tree",
+    "willow_tree",
+    "forest"
+  ],
+  "camel": [
+    "bear",
+    "cattle",
+    "elephant",
+    "rabbit",
+    "hamster"
+  ],
+  "crab": [
+    "lobster",
+    "beetle",
+    "cockroach",
+    "bee",
+    "butterfly"
+  ],
+  "sea": [
+    "mountain",
+    "plain",
+    "seal",
+    "whale",
+    "crocodile"
+  ],
+  "cattle": [
+    "bear",
+    "hamster",
+    "rabbit",
+    "camel",
+    "wolf"
+  ],
+  "aquarium_fish": [
+    "flatfish",
+    "trout",
+    "shark",
+    "ray",
+    "whale"
+  ]
+}

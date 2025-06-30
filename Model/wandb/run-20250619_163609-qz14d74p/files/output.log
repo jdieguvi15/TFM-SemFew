@@ -1,7 +1,0 @@
-INFO:root:{}
-2025-06-19 16:36:11,605 - train.py[line:54] - INFO: {}
-INFO:root:Loaded ViT-B-32 model config.
-2025-06-19 16:36:11,612 - factory.py[line:312] - INFO: Loaded ViT-B-32 model config.
-INFO:root:Loading pretrained ViT-B-32 weights (laion2b_s34b_b79k).
-2025-06-19 16:36:13,550 - factory.py[line:399] - INFO: Loading pretrained ViT-B-32 weights (laion2b_s34b_b79k).
-  0%|                                                                                                                          | 0/300 [00:00<?, ?it/s]
