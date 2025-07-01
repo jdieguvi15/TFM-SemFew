@@ -4,7 +4,7 @@
 The whole repository, until 30.6.2025, is the result of a final Master's Thesis of the [Master's Degree in Data Science](https://mat.ub.edu/sciencedata/) supervised by Petia Radeva, PhD. The [Master's Thesis report](https://github.com/jdieguvi15/TFM-SemFew/blob/main/report.pdf) is published in this repository in a PDF. Any contribution or idea to continue the lines of the proposed work will be very welcome.
 
 # Abstract:
-```
+
 Recently, Few-Shot Learning has gained significant momentum in the machine learning community. This field focuses on enabling models to learn from extremely limited data, often just a handful of examples per class. Unlike traditional deep learning, which relies on large-scale datasets, few-shot learning requires novel, efficient strategies that challenge conventional assumptions and fundamentally shift the paradigm toward "learning to learn", for faster, more adaptable models.
 
 In this work, we explore the most common approaches to few-shot learning and introduce our own method. Building upon the SemFew framework, we propose a metric-based meta-learning approach using Prototypical Networks, enhanced with a semantic support module. This module uses class descriptions from WordNet, refined through a Large Language Model, to provide high-quality semantic embed- dings that guide the model in understanding novel classes. Our proposed model is remarkably simple yet highly effective, achieving competitive performance with state-of-the-art methods, specially in 1-shot scenarios (only one example per class). 
@@ -12,17 +12,20 @@ In this work, we explore the most common approaches to few-shot learning and int
 We validate our method across three widely used few-shot classification benchmarks: CIFAR-FS, FC100, and MiniImageNet. The results consistently demonstrate the effectiveness of incorporating semantic guidance to face unseen classes. Further- more, we present an in-depth study of modern LLMs, evaluating their performance across different prompting strategies, and investigating multiple sources of data for generating the best semantic representations. This analysis offers valuable insights into how semantic guidance can be optimized for few-shot learning.
 
 Overall, this work demonstrates the power of combining simple metric-based learning with rich semantic embeddings, offering a practical and competitive alternative to more complex architectures while encouraging new directions for future research in few-shot learning.
-```
+
 
 # Method
 **Semantic Evolution**
 
-<img src='imgs/train_test.png'>
-
+<div style="background-color: white; display: inline-block; padding: 5px;">
+  <img src="imgs/train_test.png">
+</div>
 
 **Overall framework**
 
-<img src='imgs/semantic_diagram.png'>
+<div style="background-color: white; display: inline-block; padding: 5px;">
+  <img src="imgs/semantic_diagram.png">
+</div>
 
 # Few-shot Learning Results
 |  Dataset  | 1-Shot 5-Way | 5-Shot 5-Way |  
