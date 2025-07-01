@@ -17,15 +17,12 @@ Overall, this work demonstrates the power of combining simple metric-based learn
 # Method
 **Semantic Evolution**
 
-<div style="background-color: white; display: inline-block; padding: 5px;">
-  <img src="imgs/train_test.png">
-</div>
+<img src='imgs/train_test.png'>
+
 
 **Overall framework**
 
-<div style="background-color: white; display: inline-block; padding: 5px;">
-  <img src="imgs/semantic_diagram.png">
-</div>
+<img src='imgs/semantic_diagram.png'>
 
 # Few-shot Learning Results
 |  Dataset  | 1-Shot 5-Way | 5-Shot 5-Way |  
