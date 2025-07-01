@@ -71,7 +71,7 @@ Feel free to contact me to discuss any issues, questions or comments.
 * GitHub: [jdieguvi15](https://github.com/jdieguvi15)
 * Mail: joeldvd.jd@gmail.com
 
-### BibTex reference format for citation for the Code
+## BibTex reference for the code
 ```
 @misc{joelTFMcode,
 title={Enhancing Few-Shot Learning with Large Language Models},
@@ -81,7 +81,7 @@ author={Joel Dieguez},
 year={2025}
 }
 ```
-### BibTex reference format for citation for the report of the Master's Thesis
+## BibTex reference for the thesis
 
 ```
 @misc{joelTFM,
