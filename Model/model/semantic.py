@@ -10,7 +10,6 @@ from groq import Groq
 from PIL import Image
 from io import BytesIO
 import open_clip
-from openai import OpenAI
 import PIL.Image
 import google.generativeai as genai
 from google.api_core.exceptions import ResourceExhausted
@@ -36,12 +35,6 @@ def generate_descriptions(args):
     elif llm == "groq":
         client = Groq(api_key=KEY)
         model = "llama3-8b-8192"
-    elif llm == "qwen":
-        client = OpenAI(
-            base_url="https://openrouter.ai/api/v1",
-            api_key=KEY,
-        )
-        model="qwen/qwen2.5-vl-72b-instruct:free"
 
     if args['semantics_from'] == 'wordnet':
         with open("./semantic/wn_descriptions.json", 'r') as f:

@@ -236,7 +236,7 @@ def train(args):
                 cur_gap = max_acc['acc'] - O_acc
                 if cur_gap > gap_acc:
                     gap_acc = cur_gap
-                if max_acc['acc'] > max_acc1:
+                if max_acc['acc'] > max_acc1 - 1:
                     max_acc1 = max_acc['acc']
                     torch.save({
                         'G': H,
